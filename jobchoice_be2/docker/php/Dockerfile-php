@@ -1,0 +1,13 @@
+FROM php:7.2-fpm
+RUN pecl install xdebug \
+    && docker-php-ext-enable xdebug
+RUN apt-get update
+RUN apt-get install -y git cron
+RUN echo "/usr/local/bin/php * * * * * /var/www/backend/artisan schedule:run >> /dev/null 2>&1" >> /etc/crontab
+RUN php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');" \
+    && php composer-setup.php --install-dir=/usr/local/bin --filename=composer \
+    && php -r "unlink('composer-setup.php');"
+RUN docker-php-ext-install mysqli
+RUN docker-php-ext-install pdo_mysql
+RUN service cron start
+RUN printf '[PHP]\ndate.timezone = "Asia/Tokyo"\n' > /usr/local/etc/php/conf.d/tzone.ini

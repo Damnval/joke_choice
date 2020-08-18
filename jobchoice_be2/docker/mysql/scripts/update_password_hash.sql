@@ -1,0 +1,1 @@
+ALTER USER 'jobchoice'@'%' identified with mysql_native_password by 'secret';
