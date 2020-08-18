@@ -1,0 +1,58 @@
+@import '../../../assets/designs/_variables.scss';
+
+.incentive-management-search-container {
+  align-items: flex-end !important;
+  width: 100%;
+
+  .react-datepicker-wrapper {
+    input {
+      font-size: .8rem;
+      padding: 8px;
+      border-radius: 4px;
+      border-color: #bbbbbb;
+    }
+  }
+
+  .mid-date-picker {
+    margin: 0 8px;
+  }
+
+  @media #{$largeMobileScreen} {
+    .search-btn {
+      font-weight: 400;
+      border-radius: 2px;
+    }
+  
+    .incentive-date-search-data {
+      width: 100%;
+    }
+  
+    .react-datepicker-wrapper {
+      width: 45%;
+  
+      > .react-datepicker__input-container {
+        width: 100%;
+      }
+      
+      input {
+        font-size: .8rem;
+        padding: 8px;
+        border-radius: 4px;
+        border-color: #bbbbbb;
+      }
+    }
+  }
+
+
+  > span {
+    margin-left: auto;
+    @media #{$largeMobileScreen} {
+      width: 100%;
+
+      .btn-excel {
+        width: 100%;
+        margin-top: 12px;
+      }
+    }
+  }
+}

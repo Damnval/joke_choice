@@ -1,0 +1,58 @@
+$choices-panel-width: 520 !default;
+$panel-height: 600 !default;
+$card-num: 2 !default;
+$card-width: ($choices-panel-width - 22)/$card-num !default;
+$card-height: ($panel-height - 22)/$card-num !default;
+$card-margin: 5 !default;
+
+.breadcrumb-hataraki-kata {
+  background-color: white;
+  border-bottom: 3px solid rgba(255, 145, 0, 0.8);
+  border-radius: 0;
+  font-size: 1.25rem;
+  padding: 12px 0;
+  font-weight: 600;
+  color: rgba(255, 145, 0, 0.5);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+              Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  margin-bottom: 0px;
+  a {
+      color: rgba(255, 145, 0, 1);
+    }
+}
+
+
+.chosen-hatarakikata {
+  width: #{$card-width - ($card-margin * 2)}px;
+  height: #{$card-height - ($card-margin * 2)}px;
+  margin: #{$card-margin}px;
+  padding: 0;
+  background: white;
+  border: 3px solid $colorSecondary;
+  font-size: .75rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+  >img {
+    width: 100%;
+    height: 120px;
+    outline: 3px solid $colorSecondary;
+    background: white;
+    outline-offset: -3px;
+  }
+
+  >.hatarakikata-description {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    padding: 0 12px;
+    border: 1px solid $colorSecondary;
+    border-radius: 0 0 6px 6px;
+    border-top: 0;
+    background-color: lighten($colorPrimary, 25%);
+    font-weight: 600;
+  }
+}

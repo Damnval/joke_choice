@@ -1,0 +1,32 @@
+@import '../../assets/designs/_variables.scss';
+
+.notfound-background {
+  min-height: 100vh;
+}
+
+.notfound-title {
+  margin: 15px;
+}
+
+.notfound-logo {
+  color: red;
+  font-size: 100px;
+}
+
+.notfound-body {
+  text-align: center;
+
+  h4 {
+    margin: 15px;
+  }
+}
+
+.notfound-footer {
+  text-align: center;
+
+  .notfound-btn {
+    padding: 5px;
+    background-color: $colorTertiary;
+    color: #ffffff;
+  }
+}

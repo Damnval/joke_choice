@@ -1,0 +1,51 @@
+input {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    border: 1.5px solid #cccccc;
+  
+    &[type=time] {
+      flex-direction: row;
+    }
+  }
+  
+  label {
+    font-size: 1rem;
+    margin-bottom: 0.25em;
+    margin-top: 12px;
+    color: #222;
+    font-weight: lighter;
+  }
+  
+  .input-field:first-child > label {
+    margin-top: 0;
+  }
+  
+  .input-field {
+    width: 100%;
+  }
+  
+  input.error {
+    border: 1px solid red;
+  }
+  
+  .errorMessage {
+    color: red;
+    font-size: 0.75em;
+    display: relative;
+  }
+  
+  .errorNone {
+    padding: 0.75em 0;
+  }
+  
+  .required {
+    color: red;
+    white-space: pre;
+  }
+  
+  input[type=date] {
+    width: 140px;
+    font-size: 12px;
+  }
+  

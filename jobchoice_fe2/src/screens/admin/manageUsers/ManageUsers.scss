@@ -1,0 +1,109 @@
+@import '../../../assets/designs/_variables.scss';
+
+.manage-accounts-area {
+    min-height: 90vh;
+}
+
+.manage-accounts-title {
+    margin: 15px 10px;
+}
+
+.manage-account-table-button {
+    margin: 0 4px;
+
+    > svg {
+        margin: 0;
+    }
+}
+
+.col-right {
+    text-align: center;
+}
+
+.user-management-search-data {
+    flex-direction: row;
+    align-items: flex-end;
+    margin-right: 32px;
+
+    .user-management-search-field {
+        font-size: .8rem;
+        padding: 8px;
+        border-radius: 4px;
+        border-color: #bbbbbb;
+        width: 235px;
+    }
+
+    .user-management-search-age {
+        font-size: .8rem;
+        padding: 8px;
+        border-radius: 4px;
+        border-color: #bbbbbb;
+        width: 60px;
+    }
+
+    > .squig {
+        align-self: center;
+        margin: 24px 8px 0 8px;
+    }
+
+    > .admin-user-list-search-label {
+        margin-bottom: .4em;
+    }
+
+    > .admin-user-radio-box-input-field {
+        display: flex;
+        flex-direction: row;
+
+        > div {
+            margin-right: 12px;
+        }
+    }
+
+    > .admin-user-list-check-box-input-field {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+
+        > input[type=checkbox] {
+            margin-right: 8px;
+            font-size: 24px;
+            @include width-height(24px);
+        }
+    }
+
+    .contact-number-input-field {
+        > label {
+            padding: 6px 10px;
+        }
+    }
+}
+
+.manage-user-area {
+    .rt-th {
+        padding: 10px 5px !important;
+    }
+
+    .rt-header-text-area-wrap {
+        white-space: unset !important;
+        display: flex;
+        align-items: center;
+    }
+
+    .rt-td.email {
+        align-items: normal;
+        padding: 7px 10px 7px 5px;
+        display: flex;
+        margin-bottom: 0;
+        justify-content: center;
+
+        > .admin-email-management {
+            white-space: nowrap; 
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+    }
+}
+
+.admin-user-list-search-btn {
+    align-self: center;
+}

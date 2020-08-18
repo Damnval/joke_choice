@@ -1,0 +1,182 @@
+@import '../../../assets/designs/variables';
+
+.client-grid-billing-row {
+  display: grid;
+  display: -ms-grid;
+  -ms-grid-columns: 2fr 3fr 2fr 1fr 1fr 1fr;
+  grid-template-columns: 2fr 3fr 2fr 1fr 1fr 1fr;
+  
+  &:nth-child(odd) {
+    background: #f8f8f8;
+  }
+
+  @for $i from 1 through 6{
+    &:nth-child(#{$i}){
+      -ms-grid-row:#{$i};
+    }
+  }
+
+  &.header {
+    background: #eeeeee;
+  }
+
+  .client-grid-billing-item {
+    @for $i from 1 through 6{
+      &:nth-child(#{$i}){
+        -ms-grid-column:#{$i};
+      }
+    }
+  }
+}
+
+.client-grid-billing-item {
+  padding: 12px;
+}
+
+.client-billing-box {
+  padding: 30px;
+}
+
+.client-total-billing-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+  .client-total-billing-row {
+    display: flex;
+    margin-bottom: 12px;
+
+    > .client-total-billing-label {
+      border: .5px solid #cccccc;
+      padding: 12px 24px;
+      width: 200px;
+    }
+
+    > .client-total-billing-detail {
+      border: .5px solid #cccccc;
+      padding: 12px 24px;
+      width: 200px;
+      border-left: none;
+    }
+  }
+
+  > .btn-excel {
+    margin-bottom: 12px;
+  }
+}
+
+
+.client-summary-billing-container {
+  display: flex;
+  margin-top: 12px;
+  flex-direction: column;
+  align-items: flex-end;
+
+  @media #{$largeMobileScreen} {
+    @include grid(1fr, auto);
+    @include grid-row(2, 1);
+    width: 100vw;
+  }
+  .client-summary-billing-row {
+    display: flex;
+  
+    > div {
+      padding: 12px 24px;
+      width: 200px;
+
+      @media #{$largeMobileScreen} {
+        width: 100%;
+      }
+
+      &:first-child {
+        background: #fbfbfb;
+      }
+    }
+  }
+}
+
+// Used in BillingSearch.js
+.client-search-billing-container {
+  display: flex;
+  flex-direction: column;
+  > .client-search-billing-row {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    > .client-search-billing-input-field {
+      margin-right: 12px;
+      > label {
+        margin-top: 0;
+      }
+    }
+  }
+}
+
+@media #{$largeMobileScreen} {
+  .client-search-billing-container > .client-search-billing-row {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    > .client-search-billing-input-field {
+      margin: 0 !important;
+      margin-bottom: 12px !important;
+      width: 100%;
+      > label {
+        margin-top: 0;
+      }
+    }
+
+    > button {
+      width: 100%;
+    }
+  }
+
+  .client-grid-billing-row {
+    width: 150vw;
+  }
+
+  .client-grid-billing-table {
+    width: 100vw;
+    overflow-x: scroll;
+  }
+
+  .client-billing-box {
+    padding: 12px;
+    @include flex-row-center(column);
+
+    .client-total-billing-container {
+      width: 100vw;
+      @include grid(1fr, auto);
+
+      > span {
+        width: 100%;
+
+        > .btn-excel {
+          width: 100%;
+          margin-bottom: 12px;
+        }
+      }
+
+      .client-total-billing-row {
+        flex-direction: column;
+        text-align: center !important;
+        
+        > .client-total-billing-label {
+          border: .5px solid #cccccc;
+          padding: 12px 24px;
+          width: 100%;
+        }
+    
+        > .client-total-billing-detail {
+          border: .5px solid #cccccc;
+          padding: 12px 24px;
+          width: 100%;
+          border-top: none;
+          text-align: center !important;
+        }
+      }
+    }
+  }
+
+}

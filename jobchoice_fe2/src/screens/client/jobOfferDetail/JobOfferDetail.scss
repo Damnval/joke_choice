@@ -1,0 +1,69 @@
+@import '../../../assets/designs/variables';
+
+.job-offer-detail-background {
+  min-height: 100vh;
+  background: #EEF1F6;
+  @include grid(1fr 3fr, auto);
+
+  @media all and (max-width: 564px) {
+    min-height: 45vh;
+    grid-template-columns: none;
+    grid-template-rows: 45vh 3fr;
+  }
+}
+
+.job-offer-detail-background-right {
+  margin: 15px;
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 2;
+}
+
+.job-offer-detail-answer-radio-detail, .job-offer-detail-answer-checkbox-detail {
+  padding: 0 10px;
+}
+
+.job-offer-detail-footer {
+  display: flex;
+  justify-content: center;
+  background: #F7F8F9;
+  padding-bottom: 35px;
+
+  button {
+    margin: 0 40px;
+    padding: 10px 35px;
+  }
+
+  #job-offer-close-button, #job-offer-edit-button {
+    color: #555555;
+    background: #ffffff;
+  }
+
+  #job-offer-close-button {
+    color: #ffffff;
+    background: $colorSecondary;
+  }
+
+  #job-offer-edit-button {
+    color: #ffffff;
+    background: $colorTertiary;
+  }
+
+  #job-post-button {
+    color: #ffffff;
+    background: $colorGreen;
+  }
+}
+
+.job-offer-detail-sub-description {
+  color: $colorSecondary;
+  font-weight: bold;
+}
+
+.editJob-no-padding {
+  padding: 0;
+}
+
+.job-offer-draft-background {
+  background: #ffffff;
+  border: 1px solid #cccccc;
+}

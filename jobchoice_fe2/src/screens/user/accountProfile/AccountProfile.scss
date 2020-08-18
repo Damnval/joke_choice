@@ -1,0 +1,239 @@
+@import '../../../assets/designs/_variables.scss';
+
+.profile-picture {
+    border: 1px solid black;
+    border-radius: 50%;
+    width: 11rem;
+    height: 11rem;
+
+    img, canvas {
+        border-radius: 50%;
+        object-fit: cover;
+        object-fit: cover;
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: 50% 50%;
+        width: 100%;
+        height: 100%;
+        object-position: 50% 50%;
+    }
+}
+
+.profile-details-individual-title, .profile-details-individual-value {
+    font-size: 1.1rem;
+}
+
+.profile-details-individual-title {
+    font-weight: bold;
+    margin-right: 20px;
+    padding: 12px 0;
+}
+
+.profile-details-individual {
+    margin: 0.75rem 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+                 Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+
+    .input-field {
+        width: auto;
+    }
+}
+
+.profile-details-individual-value {
+    margin: 6px 0;
+    color: #aaa;
+    overflow-wrap: break-word;
+    max-width: 600px;
+
+    &.empty {
+        font-style: italic;
+    }
+}
+
+.profile-details-individual-edit {
+    min-width: 300px;
+    font-size: 1rem;
+}
+
+select.profile-details-individual-edit {
+    width: 300px;
+}
+
+.profile-hatarakikata {
+    width: 100px;
+    height: 80px;
+    border: 1px solid black;
+    margin: 6px;
+}
+
+.profile-buttons {
+    margin: 5px 10px;
+    min-width: 200px;
+    border-radius: 2px;
+
+    &:first-child {
+        margin: 5px 0;
+        // padding: 2rem 4rem;
+    }
+}
+
+.left-panel {
+    padding: 60px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: rgb(233, 233, 233);
+
+    @media #{$largeMobileScreen} {
+        min-height: 260px !important;
+    }
+}
+
+.tab-headers {
+    background: #f8f9fa;
+}
+
+.tab-container {
+    padding: 16px 8px;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+                Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+
+    button {
+        margin: 0 4px;
+    }
+}
+
+.tab-title-container {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+                 Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+    padding: 24px 8px;
+}
+
+.row-bottom-border {
+    border-bottom: 1px solid rgb(245, 245, 245);
+}
+
+form {
+    flex-direction: column;
+}
+
+.profile-details-individual.column {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.profile-sidebar-row {
+    margin-top: 12px;
+
+    @media #{$largeMobileScreen} {
+        max-height: 60px;
+    }
+}
+
+.skill-item {
+    padding-left: 8px;
+}
+
+.birthday-form-input {
+    width: 200px;
+}
+
+.aboutme-edit {
+    width: 440px;
+    height: 160px;
+
+    @media #{$mobileScreen} {
+        width: 160px;
+    }
+}
+
+.edit-school-input-form  {
+    width: 320px;
+
+    @media #{$mobileScreen} {
+        width: 100%;
+    }
+}
+
+.admin-profile-bg {
+    min-height: 100vh;
+    background: #EEF1F6;
+}
+
+.admin-profile-editor {
+    margin: 0 10px;
+    background: #ffffff;
+}
+
+.work-exp.disabled-work-experience-input {
+    width: 600px;
+    flex-direction: column;
+    border: 1px solid #cccccc;
+    border-radius: 4px;
+    padding: 12px;
+
+    .work-exp-disabled {
+        margin-bottom: 4px;
+
+        > .work-exp-disabled-label {
+            font-weight: 300;
+        }
+
+        > .work-exp-disabled-value {
+            max-width: 640px;
+            word-wrap: unset;
+            font-size: 1.125rem;
+            color: #888888;
+        }
+    }
+
+    > .input-field {
+        > .disabled-work-experience-input {
+            width: 100%;
+        }
+    }
+
+    > .disabled-work-experience-input {
+        flex-direction: row;
+        display: flex;
+
+        > .input-field {
+            margin-right: 12px;
+            > label {
+                margin-top: 0;
+            }
+        }
+    }
+}
+
+/** MEDIA QUERIES **/
+@media(max-width: 767px) {
+    .field-row > .input-field,
+    .field-row > .field-row-item, 
+    .field-row > .field-row-item > .input-field,
+    .tab-container .btn,
+    .profile-details-individual, 
+    .profile-details-individual-edit,
+    .profile-buttons,
+    .field-row,
+    .educational-background-month,
+    .work-exp input[type=date] {
+        display: block !important;
+        width: 100% !important;
+    }
+
+    .tab-container .btn {
+        text-align: center;
+    }
+
+    .profile-buttons,
+    .field-row > .field-row-item,
+    .profile-details-individual-edit,
+    .educational-background-month {
+        margin: 10px 0 10px 0 !important;
+    }
+}

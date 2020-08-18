@@ -1,0 +1,410 @@
+@import url(https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css);
+@import './assets/designs/variables';
+@import './assets/designs/hatarakikata';
+@import './assets//designs/flex';
+@import './assets//designs/breadcrumbs';
+
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: $enFont;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  code {
+    font-family: $enFont;
+  }
+  
+  html {
+    height: 100%;
+  }
+  
+  body {
+    min-height: 100%;
+  }
+  
+  #app {
+    min-height: 100vh;
+  }
+
+  .jobchoice-main {
+    font-family: $enFont;
+
+    .body {
+      @media (max-width: 1280px) {
+       zoom: 80%;
+      }
+    }
+  }
+
+  .jobchoice-main.en {
+    font-family: $enFont !important;
+  }
+
+  html,body
+{
+    overflow-x: hidden; 
+}
+
+.input-instructions {
+  font-size: .7rem;
+  margin-left: 5px;
+}
+
+.background-secondary {
+  border-radius: 0;
+  background: #f8f8f8;
+}
+
+// Implement this to make sure that footer is at the bottom of the page
+.min-height {
+  min-height: 100vh;
+}
+
+.first-page-row, .page-row {
+  margin-top: 24px;
+}
+
+.align-right {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.direction-column {
+  flex-direction: column;
+}
+
+.align-self-right {
+  margin-left: auto;
+  align-items: center;
+}
+
+.rt-th , .rt-thead, .rt-td {
+  border-right: none !important;
+}
+
+.rt-th, .rt-thead {
+  box-shadow: none !important;
+  background: #dddddd;
+}
+
+.rt-th {
+  padding: 10px !important;
+}
+
+.rt-td {
+  display: flex;
+  align-items: center;
+}
+
+.rt-tr-group:last-child {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1) !important;
+}
+
+.rt-tr:hover {
+  background: white !important;
+  -webkit-box-shadow: 0px 0px 5px 5px rgba(204,204,204,.25);
+  -moz-box-shadow: 0px 0px 5px 5px rgba(204,204,204,.25);
+  box-shadow: 0px 0px 5px 5px rgba(204,204,204,.25);
+}
+
+.col-center {
+  text-align: center !important;
+  justify-content: center !important;
+}
+
+.icon-col-header-2 {
+  max-width: 200px !important;
+}
+
+.rt-td.status, .rt-th.status {
+  max-width: 200px !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.rt-td.icon-col-2 {
+  max-width: 200px !important;
+
+  > .manage-account-table-button {
+    margin: 0;
+    justify-content: center;
+    > svg {
+      margin: 0;
+    }
+  }
+}
+
+.rt-td-text-area-wrap {
+  white-space: unset !important;
+  text-align: left;
+}
+
+.rt-header-text-area-wrap {
+  text-align: left;
+}
+
+.multi-icon-2 {
+
+  &:first-child {
+    margin-right: 4px !important;
+  }
+ 
+}
+
+.Table__pagination {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin: 12px 0;
+
+  .Table__pageButton {
+    border: 1px solid #cccccc;
+    color: #444444;
+    padding: 4px 20px;
+    margin: 0 8px;
+  }
+}
+
+.Table__visiblePagesWrapper {
+  .Table__pageButton {
+    border: 1px solid #cccccc;
+    border-radius: 50%;
+    color: #444444;
+    padding: 4px 12px;
+  }
+}
+
+.btn-view {
+  background: #dddddd !important;
+}
+
+.align-items-center {
+  align-items: center;
+}
+
+.back-color {
+  background: #eaeff5 !important;
+}
+
+.box-container {
+  background: white;
+  padding: 12px 30px;
+  margin: 24px 0;
+  border-radius: 8px;
+  -webkit-box-shadow: 0px 0px 5px 5px rgba(204,204,204,.25);
+  -moz-box-shadow: 0px 0px 5px 5px rgba(204,204,204,.25);
+  box-shadow: 0px 0px 5px 5px rgba(204,204,204,.25);
+
+  > .box-container-title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin: 12px 0;
+  }
+}
+
+.flex-column {
+  flex-direction: column;
+}
+
+.no-shadow {
+  box-shadow: none !important;
+}
+
+.text-align-right {
+  text-align: right;
+}
+
+.text-align-left {
+  text-align: left;
+}
+
+.text-align-center {
+  text-align: center;
+}
+
+.btn-excel {
+  padding: .525rem 1.75rem !important;
+  border-radius: 2px !important;
+
+  > svg {
+    margin-right: 8px;
+  }
+}
+
+.search-results-component {
+  margin-top: 12px;
+  margin-bottom: 24px;
+  margin-left: 6px;
+  font-size: 1.1rem;
+  font-style: italic;
+}
+
+.job-list-search-results-component,
+.applicant-list-search-results-component {
+  font-size: 1.1rem;
+  font-style: italic;
+}
+
+.company-job-list-search-results-component {
+  font-size: 1.05rem;
+  font-style: italic;
+  text-align: right;
+  margin-right: 12px;
+}
+
+.applicant-list-search-results-component {
+  justify-content: center;
+  max-width: 1320px;
+}
+
+.contact-number-input-field {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  > label {
+    margin: 0;
+    margin-right: 6px;
+    border: 1px solid #cccccc;
+    background: #eeeeee;
+    padding: 10px 16px;
+    border-radius: 4px;
+    white-space: nowrap;
+  }
+}
+
+.date-input-row {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+
+  .date-input-field {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 12px;
+
+    &.zipcode-input-field {
+      > .input-field {
+        max-width: 100px;
+        margin: 0px 12px;
+
+        &:first-child {
+          margin-left: 0px;
+        }
+      }
+    }
+  
+    > label {
+      margin: 0;
+      border: 1px solid #cccccc;
+      border-right: none;
+      background: #eeeeee;
+      padding: 9.5px 12px;
+      border-radius: 4px 0 0 4px;
+      white-space: nowrap;
+    }
+
+    select {
+      padding: 10px 7px;
+      border-radius: 0 4px 4px 0;
+    }
+
+    .date-input-year-dropdown, .date-input-month-dropdown {
+      width: 120px;
+    }
+
+    .date-input-day-dropdown {
+      width: 80px;
+    }
+
+    @media (max-width: 768px) {
+      margin: 6px 0;
+      width: 100%;
+      justify-content: flex-start;
+
+      .date-input-month-dropdown,
+      .date-input-day-dropdown,
+      .date-input-year-dropdown {
+        width: 100%;
+      }
+
+      > div {
+        width: 100%;
+      }
+
+    }
+
+  }
+  
+}
+
+.no-data-italic {
+  font-style: italic;
+}
+
+.educational-background-month {
+  width: 160px;
+}
+
+@media #{$mobileScreen} {
+  .work-experience-date {
+    min-width: 196px;
+  }
+}
+
+@media #{$largeMobileScreen} {
+  span, div {
+    -webkit-text-size-adjust: none !important;
+  }
+}
+
+.field-row-item > .input-field {
+  display: flex;
+  flex-direction: column;
+}
+
+.login-sns > .App > span {
+  transition: none !important;
+  opacity: 1 !important;
+}
+
+img {
+  image-orientation: from-image !important;
+}
+
+.company-success-message > span {
+  font-size: 13px !important;
+ }
+
+input {
+  display: flex !important;
+  flex-direction: row !important;
+
+  &[type=radio]{
+    -webkit-appearance: radio;
+  }
+
+  &[type=checkbox] {
+    -webkit-appearance: checkbox;
+  }
+}
+
+.font-size-6 {
+  font-size: .6rem;
+}
+
+.squig {
+  line-height: .5rem;
+  font-family: "Segoe UI";
+}
+
+.divider-two-data {
+  font-style: italic;
+  margin: 6px 4px;
+  color: #aaa;
+}

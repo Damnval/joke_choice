@@ -1,0 +1,153 @@
+@import '../../assets/designs/variables';
+
+.sns-header {
+  width: 100%;
+  height: 3rem;
+  background: #F88561;
+}
+
+.qr {
+  border: none;
+  border-radius: 4px;
+  color: #fff;
+  margin: 6px 3px;
+  margin-top: 0;
+  font-size: .8em;
+  padding: 6px 12px;
+  background: #2e2e2e;
+  display: flex;
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  > span {
+    font-size: 16px;
+    margin-left: 8px;
+  }
+}
+
+.sns-modal-body-logo {
+  display: flex;
+  justify-content: center;
+  align-self: center;
+  flex-direction: row;
+
+  button {
+    border: none;
+    margin: 6px 3px;
+    border-radius: 4px;
+    color: #fff;
+    background: white;
+
+      &.facebook {
+        font-size: 1.5em;
+        padding: 0 6px;
+        margin-top: 9px;
+        color: #3c5a99;
+
+        &:hover {
+          opacity: 0.6;
+        }
+      }
+
+      &.twitter {
+        margin: 12px 3px;
+        font-size: .8em;
+        padding: 0 8px;
+        background: #1da1f2;
+
+        &:hover {
+          opacity: 0.6;
+        }
+      }
+
+      &#line {
+        font-size: 1.5em;
+        padding: 2px 6px;
+        border-radius: 2px;
+        color: #00c300;
+        background: white;
+        text-align: center;
+
+        &:hover {
+          opacity: 0.6;
+        }
+      }
+
+      &.email-share {
+        background: #F88561;
+        color: #ffffff;
+        font-size: 1.5em;
+        margin: 11.5px 0;
+        padding: 0 10px;
+
+        &:hover {
+          opacity: 0.6;
+        }
+      }
+    }
+  .sms {
+    font-size: 1.5em;
+    padding: 2px 6px;
+    border-radius: 3px;
+    background: #4fd0d0;
+    margin: 12px 0px 12px 5px;
+    width: 1.9em;
+    text-align: center;
+
+    &:hover {
+      opacity: 0.6;
+    }
+  }
+}
+
+.sns-modal-body {
+  padding: 40px;
+  text-align: center;
+}
+
+.modal-footer {
+  height: auto;
+}
+
+.clipboard-desc{
+  margin: 12px 0;
+  font-size: .8em;
+}
+
+.clipboard-link {
+  font-size: 14px;
+  padding: 8px 16px;
+  color: #575757;
+  border: 1px solid #575757;
+  border-radius: 8px;
+  margin: 8px 24px;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  -webkit-touch-callout: none;
+}
+
+.sns-modal {
+  border: 0;
+  border-radius: 4px;
+  bottom: auto;
+  left: 50%;
+  position: fixed;
+  right: auto;
+  width: 30rem;
+  top: 50%;
+  transform: translate(-50%,-50%);
+  background: white;
+}
+
+@media #{$mobileScreen} {
+  .sns-modal {
+    width: 95%;
+  }
+  .shared-job-notice{
+    margin:0px 20px 0px 20px !important;
+  }
+}

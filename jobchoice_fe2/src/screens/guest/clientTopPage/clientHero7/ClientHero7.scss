@@ -1,0 +1,62 @@
+@import './../../../../assets//designs/variables';
+@import './../../../../assets//designs/variables';
+
+
+.client-hero-seven {
+
+  .btn-client-hero-seven,
+  .client-hero-seven-desc,
+  .client-hero-seven-inquiry-text {
+    font-size: 24px;
+    margin: 0 12px;
+  }
+
+  .container {
+      @media #{$largeMobileScreen} {
+        @include flex-row-center(column, space-between, center);
+      }
+    }
+  }
+
+.client-hero-seven-content {
+  @include grid(1fr 1fr, auto);
+
+  @media #{$largeMobileScreen} {
+    @include grid(1fr, auto);
+  }
+
+  .client-hero-seven-contact {
+    @include grid-column(1, 1);
+    @include grid-row(1,1);
+
+    > .client-hero-contact {
+      margin-top: 24px;
+      width: 400px;
+    }
+
+  }
+  
+  .client-hero-seven-inquiry {
+    @include grid-column(2, 1);
+    @include grid-row(1,1);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .btn-client-hero-seven {
+    font-size: 20px;
+    border: none;
+    background: #ffa84c; /* Old browsers */
+    background: -moz-linear-gradient(top,  #ffa84c 0%, #ff7b0d 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top,  #ffa84c 0%,#ff7b0d 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom,  #ffa84c 0%,#ff7b0d 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffa84c', endColorstr='#ff7b0d',GradientType=0 ); /* IE6-9 */
+    -moz-box-shadow: 3px 3px 6px rgb(190, 190, 190);
+    -webkit-box-shadow: 3px 3px 6px rgb(190, 190, 190);
+    box-shadow: 3px 3px 6px rgb(190, 190, 190);
+    padding: .75rem 5rem;
+  }
+
+}

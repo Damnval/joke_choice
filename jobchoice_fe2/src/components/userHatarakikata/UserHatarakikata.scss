@@ -1,0 +1,49 @@
+@import '../../assets/designs/variables';
+
+.user-hatarakikata {
+  background: #ffffff;
+  margin: 24px 20px;
+  padding: 16px;
+  border: 1px solid #f3f3f3;
+}
+
+.user-hatarakikata-title, .user-job-title, .user-matching-title {
+  margin: 0 15px;
+  padding: 4px 8px;
+  font-size: 1.5rem;
+  border-bottom: 1px solid $colorQuad;
+  display: flex;
+  justify-content: center;
+}
+
+.user-notice-button, .user-hatarakikata-button {
+  border: 1px solid $colorTertiary;
+  color: $colorTertiary;
+
+  &:hover {
+      border: 1px solid $colorTertiary;
+      background: $colorTertiary;
+      color: #ffffff;
+  }
+}
+
+.hatarakikata-title {
+  margin: 0 15px;
+  padding: 4px 8px;
+  font-size: 1.5rem;
+  display: flex;
+  justify-content: center;
+  
+  > span {
+    font-family: $enFont;
+  }
+}
+
+.user-hatarakikata-image-center{
+  justify-content: center;
+}
+
+.user-hatarakikata-edit {
+  padding: 10px 25px;
+  text-align: center;
+}

@@ -1,0 +1,259 @@
+@import '../../../../assets/designs/_variables.scss';
+
+.form-panel {
+  width: 900px;
+  margin: 60px 0;
+  display: flex;
+  flex-direction: column;
+  padding: 20px 40px;
+  border-radius: 10px;
+  border: 1px solid rgba(85, 85, 85, 0.418);
+  box-shadow: 0px 10px 16px rgba(85, 85, 85, 0.418);
+  background-color: #ffffff;
+}
+
+.field-row {
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  margin: 4px 0;
+
+  &.register-educational-bg > .field-row-item {
+    > .input-field {
+      width: 200px;
+      > select {
+        width: 100% !important;
+      }
+    }
+  }
+  
+  > .input-field {
+    margin-right: 8px;
+    width: auto;
+    display: flex;
+    flex-direction: column;
+
+    select {
+      padding: 12px;
+    }
+  }
+
+  > .field-row-item {
+    display: flex;
+    flex-direction: row;
+
+    > .input-field {
+      margin-right: 8px;
+    }
+  }
+
+  &.disabled-educ-input {
+    flex-direction: column !important;
+    border: 1px solid #cccccc;
+    padding: 12px;
+    border-radius: 4px;
+    width: 600px;
+
+    > .field-row-item {
+      margin-top: 6px;
+    }
+
+    > .educ-disabled {
+      .educ-disabled-label {
+        font-weight: 300;
+      }
+      .educ-disabled-value {
+        max-width: 640px;
+        word-wrap: unset;
+        font-size: 1.125rem;
+        color: #888888;
+      }
+    }
+  }
+}
+
+.light-icon {
+  color: rgb(107, 107, 107);
+  width: 47px;
+  height: 47px;
+
+  &:active, &:focus {
+    border: none;
+    box-shadow: none;
+  }
+}
+
+.work-exp > .input-field > label,
+.form3-row > .input-field > label {
+  margin-top: 0;
+}
+
+.form3-row > .profile-picture-container {
+  display: flex;
+  flex-direction: column;
+  margin-left: 12px;
+
+  .profile-picture-border-container {
+    padding: 12px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 300px;
+    background-color: rgb(219, 219, 219);
+    border-radius: 4px;
+
+    > .profile-picture {
+      width: 181px;
+      height: 181px;
+      justify-content: center;
+      align-content: center;
+      border-radius: 4px;
+      overflow: hidden;
+
+      canvas {
+        background-position: 50% 50%;
+        border-radius: 4px !important;
+      }
+  
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 4px;
+      }
+    }
+
+    > .profile-picture-description {
+      margin-top: 8px;
+    }
+  }
+
+}
+
+input[type=checkbox] {
+  flex-wrap: wrap;
+  width: auto;
+}
+ .checkbox {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   margin: 6px 20px 6px 0;
+ }
+
+ .label-checkbox {
+   margin-left: 4px;
+ }
+
+ .full-width {
+  width: 100%;
+ }
+
+.justify-flex-start {
+  justify-content: flex-start;
+}
+
+.skill-set {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  flex-direction: row;
+}
+
+.form-box > p {
+  text-align: left;
+  margin: 0;
+}
+
+.no-border {
+  border: 0;
+}
+
+.form-box.no-border {
+  padding: 8px 24px;
+}
+
+.status {
+  margin: 0;
+}
+
+.submit-container {
+  margin: 0 auto;
+}
+
+.self-center {
+  align-self: center;
+}
+
+.self-bottom {
+  align-self: flex-end;
+}
+
+.register-file {
+  margin-top: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.sub-title-registration {
+  text-align: center;
+}
+
+.form-3-register-button {
+    color: #ffffff;
+    border: 2px solid $colorGreen;
+    width: 45%;
+    // margin-top: 1em;
+    padding: 4px 0px;
+    font-size: 1.1em;
+    font-weight: lighter;
+    letter-spacing: 1px;
+    // margin-bottom: 0.25em;
+    background: $colorGreen;
+    transition: 300ms;
+}
+
+.form-3-register-button:hover {
+  color: #ffffff;
+  background-color: lighten($colorGreen, 10%);
+  border: 2px solid lighten($colorGreen, 40%);
+}
+
+.profile-picture-hidden-input {
+  display: none;
+}
+
+.btn-profile-picture {
+  margin: 0;
+  font-size: .8rem;
+  padding: .25rem 1rem;
+}
+
+.registration-form-3-marital-status {
+  padding: 0 16px 0 0 !important;
+
+  > label {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-top: 8px;
+    width: 60px;
+
+    > input {
+      top: 0px !important;
+    }
+  }
+}
+
+.register-center-object {
+  justify-content: center;
+  display: flex;
+  align-items: center;
+}
+
+.register-educ-background-field {
+  width: 320px;
+}

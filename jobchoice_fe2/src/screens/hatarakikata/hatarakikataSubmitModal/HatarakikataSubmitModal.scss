@@ -1,0 +1,25 @@
+.info-header {
+  background: lighten(rgb(216, 216, 216), .3);
+  border-radius: 4px 4px 0 0;
+}
+
+.info-body {
+  color: white;
+  background: rgb(110, 110, 110);
+}
+
+.modal-info-body-type {
+  color: black;
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+
+.modal-message.info {
+  margin: 8px 0;
+  font-size: 1rem;
+}
+
+.modal-footer-hatarakikata button {
+  display: inline-block !important;
+  width: 195px !important;
+}

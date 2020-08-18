@@ -1,0 +1,93 @@
+@import '../../../assets/designs/variables';
+
+.panel_1 {
+  width: 100%;
+  margin-top: 60px;
+  padding: 24px;
+  padding-left: 4px;
+  border-radius: 2px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.title {
+  display: block;
+  margin: 0px 12px;
+  font-size: 1.5rem;
+}
+
+.faq-title-description {
+  margin: 0px 12px;
+  margin-bottom: 6px;
+  font-size: 1.2rem;
+}
+
+.faq-question-card {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  margin: 6px 12px;
+  text-decoration: none;
+  color: black;
+  background: rgba(0, 0, 0, 0.025);
+
+  &:hover {
+    background: rgba(0, 0, 0, 0.05);
+  }
+  > .faq-question-card-question-title {
+    margin: 12px 12px;
+    padding: 6px 12px;
+    border-left: 4px solid $colorSecondary;
+    font-size: 1.5rem;
+    font-weight: bolder;
+    cursor: pointer;
+  }
+
+  > .answer-card {
+    border-top: 1px solid rgba(0, 0, 0, 0.125);
+    padding: 20px;
+    background:white;
+
+    > .answer-card-sub-question {
+      padding-bottom: 12px;
+      margin-bottom: 12px;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.125);
+    }
+
+    > p {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.question-card:hover {
+  text-decoration: none;
+  box-shadow: 2px 3px 3px 2px rgba(2, 11, 143, 0.2);
+  border: rgb(2, 11, 143) 1px solid;
+}
+
+@media (max-width: 321px) {
+  .question-card {
+    width: 100%;
+  }
+}
+
+.question-card:hover > .question > {
+  background-color: rgba(98, 165, 241, 0.795);
+}
+
+.timestamp {
+  font-size: .8rem;
+}
+
+.faq-contact-link {
+  margin: 20px 16px 0 16px;
+  font-size: 1.125rem;
+}
+
+.pre-wrap{
+  white-space: pre-wrap;
+}
+

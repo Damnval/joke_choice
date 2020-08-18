@@ -1,0 +1,36 @@
+.manage-accounts-area {
+  min-height: 90vh;
+}
+
+.manage-accounts-title {
+  margin: 15px 10px;
+}
+
+.manage-account-table-button {
+  margin: 0 4px;
+
+  > svg {
+      margin: 0;
+  }
+}
+
+.col-right {
+  text-align: center;
+}
+
+.client-management-search-field {
+  font-size: .8rem;
+  padding: 8px;
+  border-radius: 4px;
+  border-color: #bbbbbb;
+  width: 224px;
+}
+
+.search-next-row {
+  margin-top: 10px;
+  width: 224px;
+}
+
+.no-margin {
+  margin: 0;
+}

@@ -1,0 +1,490 @@
+@import '../../../assets/designs/_variables.scss';
+
+#detail {
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+    margin-top: 40px;
+}
+
+#detail td, #detail th {
+    border: 3px solid white ;
+    padding: 3px;
+    border-radius: 8px;
+}
+
+.detail-value {
+    text-align: left;
+    padding: 10px 20px;
+    width: 100%;
+}
+
+#detail th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    color: black;
+}
+
+.tablist-form {
+    text-align: center;
+}
+
+.tab-header {
+    margin-left: 0px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.tab-button {
+    margin: 0px 0px 5px 5px;
+}
+
+.tabs {
+    padding: 20px;
+}
+
+.no-border {
+    border: none;
+}
+
+.hata {
+    padding-left: 0px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.jobDetailBG {
+min-height: 100vh;
+}
+
+.react-tabs__tab-panel--selected.job-detail-panel {
+    border: 2px solid #DCDCDC;
+    text-align: left;
+    border-radius: 8px 8px 0 0;
+}
+
+.days-detail {
+    padding-left: 2px;
+}
+
+.table-job-detail {
+    border-radius: 4px;
+    overflow: auto;
+    border-spacing: 0;
+    border-collapse: collapse;
+    width: 100%;
+    display: block;
+
+    > tbody {
+        display: table;
+        width: 100%;
+
+        @media #{$smallDesktopScreen} {
+            display: unset;
+            width: unset;
+        }
+
+        > tr {
+            border-bottom: 1px solid #cccccc;
+
+            > th {
+                max-width: 300px;
+                min-width: 250px;
+                padding: 12px 20px;
+                text-align: right;
+                font-weight: 400;
+                text-align: left;
+                margin-bottom: 15px;
+                @media all and (max-width: 350px) {
+                    min-width: 250px;
+                    height: auto;
+                    padding-left: 10px;
+                    padding-bottom: 0;
+                }
+            }
+
+            > td {
+                @media all and (max-width: 350px) {
+                    padding-left: 10px;
+                }
+            }
+
+            &:last-child{
+               border-bottom: none;
+            }
+
+            @media all and (max-width: 768px) {
+                display: grid;
+            }
+        }
+    }
+}
+
+.apply-share {
+    padding: 12px;
+    margin: 12px 0;
+    border: 1px solid $colorSecondary;
+    @media all and (max-width: 350px) {
+        display: flex;
+    }
+}
+
+@media #{$mobileScreen}{
+    .apply-share {
+        display: inline-block;
+        width: 100%;
+    .btn-group {
+        display: block;
+    }
+
+    }
+    .share-btn, .apply-btn{
+        margin: auto !important;
+        margin-bottom: 5px !important;
+    }
+
+}
+
+.apply-job-container {
+display: flex;
+flex-direction: row;
+width: 100%;
+}
+
+.apply-job {
+height: auto;
+margin: 10px;
+flex-grow: 2;
+width: 600px;
+}
+
+.applying, .applying-header {
+    text-align: left;
+    padding-bottom: 1px;
+    margin-bottom: 2px;
+}
+
+.applying {
+    padding-right: 24px;
+    font-weight: 600;
+    font-size: 1.05rem;
+}
+
+.applying-header {
+    border-top: 2px solid #FFD700;
+    margin-bottom: 8px;
+    padding-top: 8px;
+    font-size: 1.2rem;
+    text-align: center;
+}
+
+.experience {
+width: 95%;
+height: 100px;
+border-radius: 0px;
+margin-bottom: 0px;
+}
+
+.work-days-list {
+    display: flex;
+    flex-direction: row;
+    padding-bottom: 4px;
+    margin-bottom: 4px;
+    border-bottom: 1px solid $colorQuad;
+}
+
+#submit-button {
+border-radius: 4px;
+color: white;
+width: 200px;
+}
+
+.work-days-list > p {
+    margin-bottom: 0;
+
+    label {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        margin-right: 12px;
+    }
+}
+
+input[type=radio] {
+display: block;
+width: auto;
+margin-right: 6px;
+}
+
+.application-disabled {
+background: grey;
+color: #ffffff;
+border: 2px solid grey;
+    &:hover {
+        color: #ffffff;
+    }
+}
+
+.button-group {
+    margin-left: 60px;
+}
+
+.submit-row {
+    justify-content: center;
+}
+
+.application-form {
+    margin-bottom: 24px;
+    border: 1px solid $colorTertiary;
+    padding: 16px;
+}
+
+.job-picture-outer {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 1;
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.job-picture {
+    max-height: 230px;
+    max-width: 320px;
+    height: auto;
+    width: auto;
+    overflow: hidden;
+
+    > img {
+        object-fit: cover;
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: 50% 50%;
+        width: 100%;
+        height: 100%;
+        border: 1px solid white;
+    }
+}
+
+.job-detail-top {
+    padding: 24px 0 15px 0;
+}
+
+.job-detail-lower-main {
+    padding-bottom: 12px;
+}
+
+.job-detail-info.main {
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+    font-weight: 600;
+}
+
+.job-detail-row {
+    width: auto;
+    background: white;
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 4px;
+}
+
+.job-detail-row.row-1 {
+    display: grid;
+    display: -ms-grid;
+    grid-template-columns: 1fr 1fr;
+    -ms-grid-columns: 1fr 1fr;
+    -ms-grid-rows: 1fr;
+
+    @media all and (max-width: 768px) {
+        grid-template-columns: none;
+    }
+}
+
+.job-detail-row.row-2 {
+    margin-bottom: 24px;
+}
+
+.job-detail-right-info {
+    margin-left: 24px;
+    -ms-grid-column: 2;
+    -ms-grid-column-span: 1;
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 1;
+    > .job-detail {
+        margin-bottom: 20px;
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+
+    @media all and (max-width: 768px) {
+        padding-top: 10px;
+    }
+}
+
+.job-detail-label >small {
+    font-size: 90%;
+}
+
+.free-text {
+    padding-bottom: 16px;
+    margin-bottom: 4px;
+    border-bottom: 1px solid $colorQuad;
+
+    > .errorMessage {
+        text-align: left;
+    }
+}
+
+.single-answer-list {
+    display: flex;
+    flex-direction: column;
+    border-bottom: 1px solid $colorQuad;
+    margin-bottom: 4px;
+
+    > .errorMessage {
+        text-align: left;
+    }
+
+    > div > label {
+        display: flex;
+        flex-direction: row;
+        margin-right: 12px;
+        margin-top: 2px;
+        padding-bottom: 6px;
+        padding-right: 36px;
+        text-align: left;
+        border-bottom: 1px solid #cccccc;
+
+        > input {
+            margin-top: 6px;
+        }
+
+        &:last-child {
+            border-bottom: 0;
+        }
+    }
+}
+
+.job-detail-details-area {
+    border: 1px solid $colorSecondary;
+    padding: 5px;
+}
+
+.job-detail-tab-btn-outer {
+    margin: 0 5px 0 0;
+
+    &:last-child{
+        margin: 0;
+    }
+
+    @media all and (max-width: 658px) {
+        margin: 0;
+    }
+}
+
+.job-detail-tab-btn {
+    border-top: 1px solid $colorSecondary;
+    border-left: 1px solid $colorSecondary;
+    border-right: 1px solid $colorSecondary;
+    border-radius: 5px 5px 0 0;
+    @media all and (max-width: 658px) {
+        border-radius: 0;
+        width: 100%;
+    }
+}
+
+.job-detail-tab-btn-active {
+    background: $colorSecondary;
+    color: #ffffff;
+}
+
+.hata-holder {
+    display: flex;
+    justify-content: center;
+}
+
+.job-detail-tab-buttons-area {
+    @media all and (max-width: 658px) {
+        display: grid;
+        text-align: left;
+    }
+}
+
+.working-days-container {
+    border-radius: 8px;
+    background-color: #212529;
+    color: #fff;
+    display: inline-block;
+    margin-right: 10px;
+    padding: 2px 5px;
+    margin-top: 5px;
+}
+
+.other-tag-container {
+    border-radius: 8px;
+    background-color: #fff;
+    border: 1px solid #cfcfcf;
+    display: inline-block;
+    margin-right: 10px;
+    padding: 2px 8px;
+    margin-top: 5px;
+}
+
+.job-detail-details-gallery-container {
+    width: 33.33%;
+    display: inline-block;
+    text-align: center;
+
+    @media #{$largeMobileScreen} {
+        width: 100%;
+    }
+
+    @media #{$mobileScreen} {
+        width: 100%;
+    }
+
+    @media #{$tabletScreen} {
+        width: 100%;
+    }
+}
+
+.player-container-border {
+    border-radius: 8px;
+    background-color: #fff;
+    border: 1px solid #cfcfcf;
+    padding: 20px;
+    width: 80%;
+
+    @media #{$largeMobileScreen} {
+        width: 100%;
+    }
+
+    .player-wrapper-job-details {
+        position: relative;
+
+        /* Player ratio: 100 / (1280 / 720) */
+        padding-top: 56.2%;
+
+        .player-job-details {
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+    }
+}
+
+.strength-header {
+    text-align: left;
+    padding-top: 5px;
+}
+
+.strength-description {
+    text-align: left;
+    padding-bottom: 5px;
+    padding-left: 5px;
+}

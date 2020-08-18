@@ -1,0 +1,95 @@
+$colorPrimary: #fff100;
+$colorSecondary: #FFA733;
+$colorTertiary: #f88561;
+$colorQuad: #ffc800;
+$colorGreen: #4c6e6e;
+$colorDarkGreen: #298631;
+$colorGrey: #222222;
+$colorLightGrey: #555555;
+$colorBlue: #1599b9;
+$colorDarkBlue: rgb(8, 68, 124);
+
+$largeMobileScreen: "(max-width: 480px)";
+$mobileScreen: "(max-width: 425px)";
+$tabletScreen: "(min-width: 426px) and (max-width: 768px)";
+$laptopScreen: "(min-width: 769px) and (max-width: 1024px)";
+$smallDesktopScreen: "(min-width: 990px) and (max-width: 1280px)";
+$desktopScreen: "(min-width: 1025px) and (max-width: 1440px)";
+
+$maxTabletScreen: "(max-width: 768px)";
+$maxLaptopScreen: "(max-width: 1024px)";
+$maxDesktopScreen: "(max-width: 1440px)";
+$maxsmallMobileScreen: "(max-width: 360px)";
+$maxsmallestMobileScreen: "(max-width: 320px)";
+$maxmediumMobileScreen: "(max-width: 375px)";
+$maxsmallDesktopScreen: "(max-width: 1280px)";
+
+
+// $enFont: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+$enFont: Meiryo,"Hiragino Kaku Gothic Pro","MS PGothic",sans-serif !important;
+
+@function colorDarkBlue($lighten) {
+  @return lighten($colorDarkBlue, $lighten);
+}
+
+@function colorDarkGreen($lighten) {
+  @return lighten($colorDarkGreen, $lighten);
+}
+
+@mixin flex-row-center($direction: row, $justify: center, $align: center) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $justify;
+  align-items: $align;
+}
+
+@mixin width-height($size) {
+  width: $size;
+  height: $size;
+}
+
+@mixin img-fit($fit: height) {
+  #{$fit}: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+@mixin grid($columns-template: auto, $rows-template: auto) {
+  display: grid;
+  display: -ms-grid;
+  -ms-grid-columns: $columns-template;
+  -ms-grid-rows: $rows-template;
+  grid-template-columns: $columns-template;
+  grid-template-rows: $rows-template;
+}
+
+@mixin grid-row($start, $span: 1) {
+  grid-row-start: $start;
+  grid-row: span $span;
+  -ms-grid-row: $start;
+  -ms-grid-row-span: $span;
+}
+
+@mixin grid-column($start, $span: 1) {
+  grid-column-start: $start;
+  grid-column: span $span;
+  -ms-grid-column: $start;
+  -ms-grid-column-span: $span;
+}
+
+@mixin width-height($size) {
+  width: $size;
+  height: $size;
+}
+
+.ReactTable.-highlight .rt-tbody .rt-tr:not(.-padRow):hover {
+  -webkit-box-shadow: 2px 2px 5px 6px rgba(204,204,204,.3);
+  -moz-box-shadow: 2px 2px 5px 6px rgba(204,204,204,.3);
+  box-shadow: 2px 2px 5px 6px rgba(204,204,204,.3);
+}

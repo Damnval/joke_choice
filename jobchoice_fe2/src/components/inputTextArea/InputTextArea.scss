@@ -1,0 +1,50 @@
+@import '../../assets/designs/variables';
+
+textarea {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+
+  &.success {
+    border: 1px solid $colorGreen;
+    background: lighten($colorGreen, 60%);
+  }
+}
+
+label {
+  font-size: 1rem;
+  margin-top: 12px;
+  margin-bottom: 0.25em;
+  color: #222;
+  font-weight: lighter;
+}
+
+.input-field {
+  width: 100%;
+}
+
+textarea.error {
+  border: 1px solid red;
+}
+
+.errorMessage {
+  color: red;
+  font-size: 0.75em;
+  display: relative;
+}
+
+.errorNone {
+  padding: 0.75em 0;
+}
+
+.required {
+  color: red;
+}
+
+.resize-textarea {
+  resize: vertical;
+}
+
+.isIE {
+  height: 200px;
+}

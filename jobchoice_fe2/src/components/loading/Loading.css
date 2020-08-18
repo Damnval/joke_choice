@@ -1,0 +1,18 @@
+.background-loading {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.div-loading {
+    top: 35%;
+    left: calc(50% - 2.5rem);
+    bottom: auto;
+    right: auto;
+    position: fixed;
+    font-size: 5rem;
+    color: #ffffff;
+}

@@ -1,0 +1,389 @@
+@import '../../../assets/designs/_variables.scss';
+
+.jobchoice-bg {
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+  background-image:url('../../../assets/img/LandingHero.png');
+}
+
+@media #{$maxTabletScreen} {
+  .login-wrapper-main, .login-logo-wrapper{
+    margin: auto;
+  }
+
+  .login-logo-wrapper {
+    img {
+      width: 64% !important;
+    }
+  }
+
+  .login-sns {
+    padding: 0 74px !important;
+  }
+}
+
+@media (max-width: 575px) {
+  .login-form-wrap{
+    margin: auto;
+    width: 70% !important;
+  }
+}
+
+
+@media #{$largeMobileScreen} {
+  .btn-login {
+    padding: 4px 60px  !important;
+    border-radius: 4px !important;
+  }
+
+  .login-form-wrap{
+    width: 90% !important;
+
+    .login-error {
+      font-size: .6rem !important;
+      margin: 4px 0;
+    }
+
+    .input-field {
+      margin-bottom: 2px;
+    }
+  }
+}
+
+  .login-wrapper, .email-register-wrapper {
+    height: 520px;
+    width: 520px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-radius: 50%;
+    border: 4px solid yellow;
+    background-color: #ffffff;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+                 Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  }
+
+  .login-card-title {
+    width: 100%;
+    background: $colorQuad;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    color: #444444;
+    padding: 15px;
+  }
+
+  .login-card-body {
+    padding: 10px 40px;
+  }
+
+  .logo-row {
+    // margin-bottom: 8px;
+
+    img {
+      width: 100%;
+      height: 45px;
+    }
+  }
+  
+  form.login-form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+
+    div {
+      margin-bottom: 8px;
+
+      &:first-child {
+        margin-top: 28px;
+      }
+
+      input {
+        font-size: .8em;
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+                     Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+      }
+
+    }
+
+    .btn-login {
+      margin-bottom: 8px;
+      font-weight: 600 !important;
+      font-size: 1.2em !important;
+      box-shadow: 0px 1px 5px 2px rgba(85, 85, 85, .2);
+      padding: 6px 60px ;
+    }
+
+  }
+  
+  .add-info {
+    text-align: center;
+    width: 100%;
+    color: #111;
+    font-weight: lighter;
+    font-size: .7em;
+  }
+
+  .login-sns {
+    justify-content: space-around !important;
+    padding: 0 60px;
+    margin-bottom: 8px;
+
+    @media #{$largeMobileScreen} {
+      > .App {
+        width: 30px;
+        height: 30px;
+        margin-top: 9px;
+        > span {
+          height: 100%;
+          width: 100%;
+          // > .facebook {
+            // > svg {
+              //  margin: 0;
+              //  font-size: 1.625em;
+            // }
+          // }
+        }
+      }
+
+      .twitter {
+        width: 31px;
+        height: 31px;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 6px;
+        margin-top: 0.4em;
+        margin-left: 0.5em;
+      }
+
+      #line {
+        padding: 0 !important;
+        width: 30px;
+        height: 30px;
+        margin-top: -1px;
+        margin-left: 8px;
+      }
+    }
+
+    button {
+      border: none;
+      border-radius: 4px;
+      color: #fff;
+      background: white;
+  
+        &.facebook {
+          color: #3c5a99;
+          padding: 0;
+
+          &:hover {
+            opacity: 0.6;
+          }
+        }
+  
+        &.twitter {
+          padding: 4px 6px;
+          background: #1da1f2;
+
+          &:hover {
+            opacity: 0.6;
+          }
+        }
+        
+    }
+
+    #line {
+      padding: 2px 0px;
+      color: #00c300;
+      background: white;
+      border-radius: 0px;
+      text-align: center;
+      display: inline-block;
+      border: none;
+
+      &:hover {
+        opacity: 0.6;
+      }
+    }
+
+    button:active, button:focus {
+      outline: none;
+    }
+  }
+
+  .login-error {
+    color: #cc2222;
+    font-weight: bold;
+    font-size: 14px;
+    margin-bottom: 8px;
+  }
+
+  .login-to-register {
+    display: block;
+    text-align: center;
+    margin-bottom: 12px;
+
+    .link-container {
+      font-size: .75em;
+    }
+  }
+
+  .link-container {
+    display: block;
+    text-align: center;
+
+    a {
+      color: $colorSecondary;
+    }
+    
+  }
+
+  .btn-tertiary {
+    background-color: $colorTertiary !important;
+    color: white;
+    border-radius: 8px;
+
+    &:hover {
+      color: #ffffff !important;
+      background-color: darken($colorTertiary, 5) !important;
+    }
+  }
+
+#or {
+  margin: 0 4px;
+  font-size: .8em;
+}
+
+::-webkit-input-placeholder {
+  text-align: center;
+}
+
+.email-login, .password-login {
+  text-align: center;
+}
+
+@media #{$laptopScreen} {
+  .add-info {
+    font-size: 1rem;
+  }
+
+  .login-wrapper {
+    font-size: .9rem;
+    margin: 25% -10%;
+
+    img {
+      height: 46px;
+      width: 100%;
+    }
+
+    form.login-form div:first-child {
+      margin-top: 16px;
+    }
+  }
+}
+
+@media #{$tabletScreen} {
+  .add-info {
+    font-size: 1rem;
+  }
+
+  .login-wrapper {
+    font-size: .9rem;
+
+    img {
+      height: 40px;
+      width: 100% !important;
+    }
+
+    form.login-form div:first-child {
+      margin-top: 16px;
+    }
+  }
+}
+
+@media #{$largeMobileScreen} {
+  .login-sns {
+    font-size: 2em;
+    margin-bottom: 0;
+
+    .twitter {
+      padding: 3px;
+    }
+
+    .fa-twitter {
+      font-size: 1.15em;
+    }
+
+    .fa-facebook {
+      margin-top: -5px;
+      font-size: 1.92em;
+      margin-left: -4px;
+    }
+
+    .fa-line {
+      font-size: 2.2em;
+    }
+  }
+
+  .add-info {
+    font-size: .7rem;
+    margin-bottom: 0px;
+  }
+
+  .login-wrapper {
+    font-size: .6em;
+    margin: 25% -2.5%;
+    padding: 40px;
+    height: 360px;
+    width: 360px;
+
+    img {
+      height: 25px;
+      width: 50% !important;
+    }
+
+    form.login-form div:first-child {
+      margin-top: 8px;
+    }
+
+    form.login-form .btn-login {
+      font-size: .9rem !important;
+      margin-bottom: 4px !important;
+    }
+
+    form.login-form div input {
+      padding: 6px;
+    }
+
+    .login-error {
+      font-size: .8rem;
+    }
+
+    .login-to-register .link-container {
+      font-size: 10px;
+    }
+  }
+
+  form.login-form .btn-login {
+    margin-top: -4px !important;
+  }
+  
+  form.login-form div {
+    margin-bottom: 4px !important;
+  }
+}
+
+.login-wrapper-container {
+  display: flex;
+  justify-content: center;
+}
+
+.email-register-wrapper {
+  .login-sns {
+    padding: 0 30px;
+  }
+}

@@ -1,0 +1,144 @@
+@import '../../../assets/designs/variables';
+
+.joboffercat-background {
+  min-height: 100vh;
+}
+
+.joboffercat-title {
+  margin: 10px;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.joboffercat-hero-image {
+  background: #cccccc;
+  border: 3px solid $colorTertiary;
+  margin: 10px;
+  height: 256px;
+
+  img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+  }
+}
+
+.joboffercat-other-section {
+  margin: 10px;
+
+  ul {
+    margin: 0;
+    padding: 15px;
+    li {
+      float: none;
+    }
+  }
+
+  p {
+    margin: 5px 10px;
+    text-align: left;
+  }
+}
+
+.joboffercat-section-divider {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px 16px 5px 10px;
+  background: #EEF1F6;
+  border-left: 5px solid $colorTertiary;
+  font-size: 1.3rem;
+
+  &:hover {
+    background: rgb(207, 207, 207);
+    cursor: pointer;
+  }
+}
+
+.joboffercat-search-button {
+  background: $colorGreen;
+  color: #ffffff;
+  padding: 15px;
+  width: 50%;
+
+  &:hover {
+    color: #ffffff;
+  }
+}
+
+.joboffercat-search-title {
+  margin: 10px;
+}
+
+.joboffercat-search-table-area {
+  margin: 10px 20px 0 20px;
+
+  table {
+    th {
+      background: $colorQuad;
+      color: #ffffff;
+    }
+  }
+}
+
+.joboffercat-jobs-list-area {
+  margin: 10px 20px;
+
+  .joboffercat-jobs-list {
+    overflow-y: scroll; 
+    max-height: 642px;
+    background: #EEF1F6;
+
+    @media all and (max-width: 767px) {
+      height: 704px;
+    }
+  }
+}
+
+
+.breadcrumb-featured {
+  background-color: white;
+  border-bottom: 3px solid rgba(255, 145, 0, 0.8);
+  border-radius: 0;
+  font-size: 1.25rem;
+  padding: 12px 0;
+  font-weight: 600;
+  color: rgba(255, 145, 0, 0.5);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+              Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  margin-bottom: 0px;
+  a {
+      color: rgba(255, 145, 0, 1);
+    }
+}
+
+.joboffercat-description-area {
+  padding: 10px 30px;
+
+  > .joboffercat-description-red {
+    color: red;
+  }
+
+  > ul {
+    list-style: none;
+
+    > li {
+      margin: 0;
+      margin-bottom: 1em;
+      padding-left: 1.5em;
+      position: relative;
+      
+      &:after {
+        content: '';
+        height: .4em;
+        width: .4em;
+        background: #000000;
+        display: block;
+        position: absolute;
+        transform: rotate(45deg);
+        top: .25em;
+        left: 0;
+      }
+    }
+  }
+}

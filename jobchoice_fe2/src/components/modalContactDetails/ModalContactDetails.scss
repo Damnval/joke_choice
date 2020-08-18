@@ -1,0 +1,117 @@
+@import '../../assets/designs/_variables.scss';
+
+.contactModal-dynamic {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.ReactModal__Overlay {
+    opacity: 0;
+    transition: opacity 200ms ease-in-out;
+}
+
+.ReactModal__Overlay--after-open{
+    opacity: 1;
+}
+
+.ReactModal__Overlay--before-close{
+    opacity: 0;
+}
+
+.contactModal-header {
+    width: 100%;
+    height: 3rem;
+    background: $colorQuad;
+}
+
+.contactModal-body, .contactModal-footer {
+    display: block;
+    width: 100%;
+    text-align: center;
+}
+
+.contactModal-body {
+    margin: 5px;
+
+    .contactModal-body-top {
+        margin: 5px 15px;
+        padding: 10px;
+        border-bottom: 2px solid $colorSecondary;
+
+        span {
+            display: block;
+        }
+
+        #larger {
+            font-size: 1.4rem;
+        }
+    }
+
+    .contactModal-body-details {
+        margin: 5px 10px;
+        padding: 10px;
+
+        .contactModal-body-details-individual {
+            text-align: left;
+            padding: 5px;
+            max-height: 100px;
+
+            .contactModal-details-text {
+                overflow-x: auto;
+            }
+            overflow: auto;
+            overflow-y: hidden;
+
+            #contact-long-details {
+                padding: 0 5px;
+                overflow-y: scroll; 
+                height: 70px;
+                word-wrap: break-word;
+            }
+
+            .contactModal-details-title {
+                font-weight: bold;
+            }
+
+            #non-provided {
+                color: #999999;
+            }
+        }
+    }
+}
+
+.contactModal-footer {
+    padding: 0 15px;
+
+    .contact-button {
+        padding: 5px;
+        display: block;
+    }
+
+    .contact-continue {
+        float: right;
+        background: $colorGreen;
+        color: #ffffff;
+
+        &:hover {
+            color: #ffffff;
+        }
+    }
+
+    .contact-cancel {
+        float: left;
+        border: 1px solid $colorTertiary;
+        color: $colorTertiary;
+        background: #ffffff;
+
+        &:hover {
+            border: 1px solid $colorTertiary;
+            color: #ffffff;
+            background: $colorTertiary;
+        }
+    }
+}

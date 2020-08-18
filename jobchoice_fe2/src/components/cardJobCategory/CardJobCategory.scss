@@ -1,0 +1,63 @@
+@import '../../assets/designs/variables';
+
+.joboffercat-jobs {
+    background: #ffffff;
+    padding: 15px 0;
+    margin: 10px 0;
+
+        &:hover {
+            -webkit-box-shadow: 2px 2px 5px 3px rgba(204,204,204,1);
+            -moz-box-shadow: 2px 2px 5px 3px rgba(204,204,204,1);
+            box-shadow: 2px 2px 5px 3px rgba(204,204,204,1);
+            cursor: pointer;
+        }
+
+    .joboffercat-jobs-image {
+        margin: 5px 0;
+        height: 253px;
+        border: 1px solid black;
+    }
+}
+
+.joboffercat-jobs-desc {
+    margin: 5px 0;
+}
+
+.joboffercat-jobs-desc-top {
+    display: flex;
+    justify-content: space-between;
+
+    .joboffercat-jobs-desc-top-right {
+        b {
+            color: #C1A901;
+        }
+    }
+}
+
+.joboffercat-jobs-desc-title {
+    font-size: 1.7rem;
+    color: $colorSecondary;
+    text-align: center;
+}
+
+.joboffercat-jobs-desc-desc {
+    padding: 10px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+}
+
+.joboffercat-jobs-desc-hatarakikata {
+    margin: 10px;
+
+    .joboffercat-jobs-desc-hatarakikata-spacer {
+        margin: 10px 0;
+
+        .joboffercat-jobs-desc-hatarakikata-individual {
+            border: 1px solid black;
+            height: 100px;
+        }
+    }
+}

@@ -1,0 +1,98 @@
+@import '../../assets/designs/variables';
+
+.modalEmail-header {
+  width: 100%;
+  height: 3rem;
+  background: $colorTertiary;
+}
+
+.modalEmail-body {
+  margin: 10px;
+
+  .modalEmail-input-top, .modalEmail-input-indiviudal, .modalEmail-input-indiviudal-text {
+    padding: 10px 15px;
+    padding-bottom: 0;
+  }
+
+  .modalEmail-input-top {
+    font-size: 1.4rem;
+
+    span {
+      padding-right: 10px;
+    }
+  }
+
+  .modalEmail-input-indiviudal {
+    display: flex;
+
+    label {
+      margin-right: 25px;
+      font-weight: bold;
+      min-width: 60px;
+    }
+
+    input {
+      padding: 5px 10px;
+    }
+
+    .modalEmail-input-individiual-email {
+    }
+  }
+
+  .modalEmail-input-indiviudal-text {
+    text-align: center;
+
+    textarea {
+      margin-bottom: 10px;
+      height: 240px;
+    }
+    
+    span {
+      color: $colorSecondary;
+    }
+  }
+}
+
+.modalEmail-footer {
+  width: 440px;
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+
+  .modalEmail-send {
+    padding: 8px 80px;
+    background: $colorGreen;
+    color: #ffffff;
+    border-radius: 2px;
+
+    &:hover {
+      color: #ffffff;
+    }
+  }
+
+  .modalEmail-back {
+    padding: 8px 40px;
+    border-radius: 2px;
+  }
+}
+.error-messager {
+  padding-left: 15px;
+  color: red;
+}
+
+.error-noner {
+  height: 1.5rem;
+}
+
+.modalEmail-from-text {
+  padding: 0 15px;
+
+  label {
+    font-weight: bold;
+    white-space: pre;
+  }
+
+  span {
+    color: $colorTertiary;
+  }
+}

@@ -1,0 +1,322 @@
+@import '../../../assets/designs/_variables.scss';
+
+@media #{$maxsmallestMobileScreen} {
+  .job_seeker{
+      font-size: 1px;
+  }
+  .company-success-message > span {
+    font-size: 11px !important;
+  }
+
+}
+
+.register-area {
+  min-height: 100vh;
+}
+
+.register-card {
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 0px 10px 50px rgba(129, 129, 129, 0.4);
+  margin: 40px 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+  Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+
+  @media #{$mobileScreen} {
+    border-radius: 2px;
+    margin: 20px 0 40px 0;
+  }
+}
+
+.register-card-title {
+  padding: 20px 40px;
+  margin: 0;
+  width: 100%;
+  background: $colorQuad;
+  color: #444444;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  font-size: 2rem;
+
+  @media #{$mobileScreen} {
+    border-radius: 2px;
+  }
+}
+
+.register-card-body {
+  padding: 10px 40px 20px 40px;
+
+  @media #{$mobileScreen} {
+    padding: 5px;
+
+    .form-box {
+      padding: 8px 12px !important;
+
+      > .field-row {
+        flex-wrap: wrap;
+
+        > .field-row-item {
+          flex-wrap: wrap;
+        }
+
+        .input-field {
+          margin-top: 4px;
+          max-width: 250px;
+        }
+
+      }
+
+      .about-me-registration-form {
+        max-width:  250px;
+      }
+      
+    }
+
+    .submit-container {
+      width: 240px;
+    }
+  }
+}
+
+form {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+h1 {
+  text-align: center;
+  width: 100%;
+  color: #111;
+  font-weight: lighter;
+}
+
+label {
+  font-size: 1rem;
+  margin-bottom: 0.25em;
+  color: #222;
+  font-weight: lighter;
+}
+
+textarea {
+  resize: none;
+}
+
+input, textarea {
+  padding: 10px 10px;
+  border-radius: 5px;
+  outline: none;
+  border: 1px solid #cfcfcf;
+}
+
+input::placeholder {
+  font-size: 1.2em;
+  font-weight: lighter;
+  color: #999;
+}
+
+input.error {
+  border: 1px solid red;
+}
+
+.errorMessage {
+  color: red;
+  font-size: 0.75em;
+}
+
+.name,
+.address,
+.email,
+.password,
+.c_password,
+.contact_no {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 15px;
+}
+
+.name,
+.address,
+.email,
+.password,
+.c_password {
+  width: 49%;
+}
+.name,
+.address,
+.email,
+.password, 
+.c_password,
+.contact_no {
+  width: 100%;
+}
+
+.register {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#gender-selector {
+  padding: 15px;
+}
+
+.register-button {
+  color: #ffffff;
+  border: 2px solid lighten($colorGreen, 10%);
+  width: 100%;
+  margin-top: 1em;
+  padding: 8px 0px;
+  font-size: 1.1em;
+  font-weight: lighter;
+  letter-spacing: 1px;
+  margin-bottom: 0.25em;
+  background: $colorGreen;
+  transition: 300ms;
+}
+
+.register-button:hover {
+  color: #ffffff;
+  background-color: lighten($colorGreen, 10%);
+  border: 2px solid lighten($colorGreen, 40%);
+}
+
+.register small {
+  color: #999;
+  font-weight: lighter;
+}
+
+.register-disabled {
+  background-color: grey;
+  color: #fff;
+  border: 2px solid #fff;
+  width: 100%;
+  margin-top: 1em;
+  padding: 8px 0px;
+  font-size: 1em;
+  font-weight: lighter;
+  letter-spacing: 1px;
+  margin-bottom: 0.25em;
+}
+
+.register-disabled:hover {
+  color: #ffffff;
+}
+
+.register-required {
+  color: red;
+}
+
+#hide {
+  display: none;
+}
+
+.register-breadcrumbs-icon-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-top: 4rem;
+
+  .register-breadcrumbs-container {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    width: 40px;
+
+    > div {
+      text-align: center;
+    }
+
+    .register-breadcrumbs-icon-circle {
+      width: 40px;
+      height: 40px;
+      border: 2px solid #eeeeee;
+      border-radius: 50%;
+      padding: 4px;
+      margin-bottom: 4px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: #eeeeee;
+  
+      &.active {
+        border: 2px solid darken($colorSecondary, 11%);
+        color: darken($colorSecondary, 11%);
+      }
+
+      &.success {
+        border: 2px solid darken(rgb(49, 122, 49), 1%);
+        color: darken(rgb(49, 122, 49), 1%);
+      }
+    }
+  }
+
+  .register-breadcrumbs-line {
+    width: 200px;
+    height: 2px;
+    background: #eeeeee;
+    margin-top: 20px;
+  }
+
+  @media #{$mobileScreen} {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2rem;
+
+    .register-breadcrumbs-container {
+      margin-bottom: 16px;
+      flex-direction: row;
+      justify-content: center;
+      width: 200px;
+
+      &:last-child {
+        margin-bottom: 0px;
+      }
+    }
+
+    .register-breadcrumbs-line {
+      display: none;
+    }
+  }
+}
+
+.registration-breadcrumbs-info-text {
+  width: 140px;
+}
+
+.btn-register-size {
+  min-width: 38%;
+  border-radius: 2px;
+}
+
+.btn-register-size-2 {
+  min-width: 20%;
+  border-radius: 2px;
+}
+
+.submit-flex-row-space-between {
+  justify-content: space-between !important;
+}
+
+.submit {
+  margin-top: 24px;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.submit-form-3 {
+  margin-top: 12px;
+  padding: 0 24px;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+}

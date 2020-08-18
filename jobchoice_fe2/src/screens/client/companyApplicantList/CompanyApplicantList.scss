@@ -1,0 +1,447 @@
+@import '../../../assets/designs/variables';
+
+.applicant-search-filter {
+  border-top: 1px solid #cccccc;
+  border-bottom: 1px solid #cccccc;
+  display: flex;
+  margin: 12px 0;
+  padding: 20px 0;
+
+  &.gender, &.status {
+      width: 260px;
+      border: 1px solid #cccccc;
+      padding: 6px;
+      margin-right: 24px;
+  }
+
+  &.status {
+    width: 360px;
+  }
+
+  &.age {
+      width: 140px;
+      border: 1px solid #cccccc;
+      padding: 6px;
+      margin-right: 24px;
+  }
+
+  &.keyword {
+      width: 240px;
+      border: 1px solid #cccccc;
+      padding: 6px;
+      margin-right: 24px;
+  }
+}
+
+.search-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  > label {
+      margin: 0;
+      margin-right: 6px;
+      border: 1px solid #cccccc;
+      background: #eeeeee;
+      padding: 6px 16px;
+      border-radius: 4px;
+      white-space: nowrap;
+  }
+}
+
+.search-button {
+  padding: .375rem 2rem;
+}
+
+.applicant-grid {
+  display: grid;
+  display: -ms-grid;
+  -ms-grid-columns: 8% 92%;
+  -ms-grid-rows: 81px auto;
+  grid-template-columns: 8% 92%;
+  margin: 12px;
+  min-width: 1320px;
+  overflow: auto;
+
+  >.applicant-grid-header {
+    display: grid;
+    display: -ms-grid;
+    -ms-grid-column-span: 2; 
+    grid-column: span 2;
+    -ms-grid-columns: 8% 92%;
+    -ms-grid-rows: 100%;
+    grid-template-columns: 8% 92%;
+
+    .job-grid-item {
+      font-size: 14px;
+      grid-column: span 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-top: 1px solid black;
+      border-left: 1px solid black;
+      border-bottom: 1px solid black;
+      background: #eeeeee;
+      -ms-grid-column: 1;
+
+      > .item-data {
+          padding: 0;
+          -ms-grid-rows: 50%;
+          grid-template-rows: 50%;
+          display: grid;
+          display: -ms-grid;
+          border: 0;
+          
+          > div {
+            padding-left: 20px;
+            display: flex;
+            align-items: center;
+          }
+      }
+    }
+
+    .job-grid-item-2 {
+      display: grid;
+      display: -ms-grid;
+      font-size: 14px;
+      grid-column: span 1;
+      grid-template-columns: 12% 12% 8% 7% 7% 18% 8% 16% 7% 5%;
+      grid-template-rows: 40px 40px;
+      border-top: 1px solid black;
+      border-left: 1px solid black;
+      -ms-grid-column: 2;
+      -ms-grid-columns: 12% 12% 8% 7% 7% 18% 8% 16% 7% 5%;
+      -ms-grid-rows: 40px 40px;
+
+      > .main-header {
+        -ms-grid-row: 1;
+        -ms-grid-row-span: 1;
+        -ms-grid-column-span: 10;
+        grid-row-start: 1;
+        grid-row: span 1;
+        grid-column: span 10;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 4px;
+      }
+  
+      > div {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          padding: 4px;
+          border-right: 1px solid black;
+          border-bottom: 1px solid black;
+          background: #fafafa;
+          
+          &:first-child {
+              background: #eeeeee;
+          }
+      }
+
+      > .item-data {
+          padding: 0;
+          grid-template-rows: 50%;
+          display: grid;
+          display: -ms-grid;
+          border: 0;
+          
+          > div {
+              padding-left: 20px;
+              display: flex;
+              align-items: center;
+          }
+      }
+
+      @for $i from 1 through 10{
+        .sub-header-#{$i}{
+          -ms-grid-row: 2;
+          -ms-grid-column:#{$i};
+        }
+      }
+
+    }
+
+    .job-grid-item-3 {
+      display: grid;
+      display: -ms-grid;
+      font-size: 14px;
+      grid-column: span 1;
+      grid-template-columns: 20% 20% 20% 20% 20%;
+      grid-template-rows: 40px 40px;
+
+      > .main-header {
+        grid-row-start: 1;
+        grid-row: span 1;
+        grid-column: span 10;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 4px;
+      }
+  
+      > div {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          padding: 4px;
+          border: 1px solid black;
+          
+          &:first-child {
+              background: #f5f5f5;
+          }
+      }
+
+      > .item-data {
+          padding: 0;
+          grid-template-rows: 50%;
+          display: grid;
+          display: -ms-grid;
+          border: 0;
+          
+          > div {
+              border: 1px solid black;
+              padding-left: 20px;
+              display: flex;
+              align-items: center;
+          }
+      }
+    }
+  }
+}
+
+.grid-container {
+  width: 100%;
+  overflow: auto;
+  display: flex;
+  justify-content: center;
+}
+
+@media #{$desktopScreen} {
+  .applicant-grid {
+    min-width: 1356px;
+  }
+}
+
+@media #{$laptopScreen} {
+  .applicant-grid {
+    min-width: 920px;
+  }
+}
+
+@media (max-width: 768px) {
+  .grid-container {
+    justify-content: flex-start;
+  }
+}
+
+.application-grid-row {
+  display: grid;
+  display: -ms-grid;
+  -ms-grid-row: 2; 
+  -ms-grid-column-span: 2; 
+  -ms-grid-columns: 8% 11.04% 11.04% 7.36% 6.44% 6.44% 16.56% 7.36% 14.72% 6.44% 4.6%;
+  grid-column: span 2;
+  grid-template-columns: 8% 11.04% 11.04% 7.36% 6.44% 6.44% 16.56% 7.36% 14.72% 6.44% 4.6%;
+  margin: 1px 0;
+  border-top: 1px solid black;
+  border-left: 1px solid black;
+
+  &.active {
+    background: #fafafa;
+  }
+
+  &:hover {
+    background: lighten($colorSecondary, 30%);
+
+    .grid-item-sharer-info {
+      background: lighten($colorTertiary, 1%);
+    }
+
+    .sharer-info-headers {
+      background: lighten($colorTertiary, 12%);
+    }
+
+    .sharer-info-details {
+      background: white;
+    }
+  }
+
+  @for $i from 0 through 100{
+    &.grid-row-#{$i}{
+      -ms-grid-row:#{$i+2};
+    }
+  }
+  
+  > div {
+    border-right: 1px solid black;
+    border-bottom: 1px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 12px;
+
+    @for $i from 1 through 11{
+      &.sub-data-#{$i}{
+        -ms-grid-column:#{$i};
+      }
+    }
+
+  }
+
+  > .note {
+    padding: 6px;
+
+    .input-field, span {
+      width: 100%;
+      height: 100%;
+    }
+
+    textarea {
+      padding: 6px;
+      font-size: 12px;
+      height: 100%;
+    }
+  }
+
+  .grid-item-sharer-info {
+    -ms-grid-column-span: 2;
+    -ms-grid-row-span: 2;
+    -ms-grid-column: 1;
+    -ms-grid-row: 2;
+    grid-column: span 2;
+    grid-row: span 2;
+    padding: 3px 12px;
+    background: #e4e4e4;
+    font-weight: 600;
+    font-size: 1.1rem;
+  }
+
+  .sharer-info-headers {
+    -ms-grid-column-span: 9;
+    -ms-grid-columns: 20% 15% 20% 20% 25%;
+    -ms-grid-column: 3;
+    -ms-grid-row: 2;
+    grid-column: span 9;
+    grid-template-columns: 20% 15% 20% 20% 25%;
+    padding: 0;
+    display: grid;
+    display: -ms-grid;
+    border-top: 1px solid black;
+    border-left: 1px solid black;
+    font-size: .9rem;
+    font-weight: 600;
+    background: #f1f1f1;
+
+    > div {
+      padding: 12px 12px;
+      height: 100%;
+      border-right: 1px solid black;
+      border-bottom: 1px solid black;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      @for $i from 1 through 5{
+        &.sub-header-#{$i}{
+          -ms-grid-column:#{$i};
+        }
+      }
+    }
+
+    > .note {
+      padding: 6px;
+  
+      .input-field, span {
+        width: 100%;
+        height: 100%;
+      }
+  
+      textarea {
+        padding: 6px;
+        font-size: 12px;
+        height: 100%;
+      }
+    }
+  }
+
+  .sharer-info-details {
+    -ms-grid-column-span: 9;
+    -ms-grid-columns: 20% 15% 20% 20% 25%;
+    -ms-grid-column: 3;
+    -ms-grid-row: 3;
+    grid-column: span 9;
+    grid-template-columns: 20% 15% 20% 20% 25%;
+    padding: 0;
+    display: grid;
+    display: -ms-grid;
+    border-top: 1px solid black;
+    border-left: 1px solid black;
+    background: white;
+
+    > div {
+      padding: 12px 12px;
+      height: 100%;
+      border-right: 1px solid black;
+      border-bottom: 1px solid black;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      @for $i from 1 through 5{
+        &.sub-data-#{$i}{
+          -ms-grid-column:#{$i};
+        }
+      }
+    }
+
+    > .note {
+      padding: 6px;
+  
+      .input-field, span {
+        width: 100%;
+        height: 100%;
+      }
+  
+      textarea {
+        padding: 6px;
+        font-size: 12px;
+        height: 100%;
+      }
+    }
+  }
+
+  .sharer-info-null {
+    -ms-grid-column-span: 9;
+    -ms-grid-row: 2;
+    grid-column: span 9;
+  }
+
+  .grid-clickable {
+    padding: 0;
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+}
+
+.preview > button {
+  width: 100%;
+  margin: 4px 0;
+  padding: .3rem .3rem;
+  font-size: .9rem;
+}
+
+.preview-label.rejected {
+  color: red;
+}
+
+.company-applicant-list-container {
+  margin: 12px;
+}
+
+.applicant-list-applicant-employment-status-container {
+  text-align: center;
+}

@@ -1,0 +1,213 @@
+@import '../../../../assets/designs/variables';
+
+#homepage-hero {
+    .cover-image {
+      position: relative;
+      display: flex;
+      background: #FEF899;
+      background-size:cover;
+      background-position:center center;
+      width: 100%;
+      height: 940px;
+      align-items: center;
+      justify-content: left;
+    }
+
+    @media #{$largeMobileScreen} {
+      .cover-image {
+        height: 700px;
+
+        > .cover-image-source {
+          width: 1900px;
+          height: 100%;
+        }
+      }
+
+      #cover-hero-div-label{
+        margin: auto;
+      }
+
+    }
+  
+    #cover-hero-div-label {
+      display: flex;
+      text-align: center;
+      color: #000000;
+      font-size: xx-large;
+      background: #ffffff;
+      padding: 140px 100px;
+      border: 3px solid $colorPrimary;
+      border-radius: 50%;
+      width: 520px;
+      align-items: center;
+      flex-direction: column;
+      justify-content: center;
+      height: 520px;
+
+      image {
+        flex-shrink: 0;
+        min-width: 100%;
+        // height: 260px;
+      }
+
+      .cover-hero-button {
+          padding: 12px 30px;
+          margin: 15px 0;
+          background: $colorTertiary;
+          border: 1px solid transparent;
+          color: #ffffff;
+
+          &:hover {
+            background: #ffffff;
+            border: 1px solid $colorTertiary;
+            color: $colorTertiary;
+          }
+
+          @media #{$largeMobileScreen} {
+            padding: 8px 15px;
+            font-size: .9rem;
+          }
+      }
+
+      @media all and (max-width: 1199px) {
+        padding-top: 100px;
+        padding-bottom: 100px;
+        height: 440px;
+        width: 440px;
+      }
+
+      @media all and (max-width: 991px) {
+        padding: 40px;
+      }
+
+      @media all and (max-width: 976px) {
+        padding: 55px 45px;
+      }
+
+      @media all and (max-width: 768px) {
+        padding-top: 130px;
+        padding-bottom: 130px;
+        width: 520px;
+        height: 520px;
+      }
+
+      @media #{$largeMobileScreen} {
+        padding: 40px;
+        height: 360px;
+        width: 360px;
+        display: flex;
+        justify-content: center;
+        
+        > h4 {
+          font-size: 1rem;
+        }
+
+        > img {
+          flex-shrink: 0;
+          width: 70%; 
+        }
+      }
+
+    }
+  
+  }
+
+  .page-section {
+    width: 100%;
+    padding: 120px 0 10px 0;
+    box-sizing: border-box;
+    position: absolute;
+    top: 940px;
+
+    @media #{$largeMobileScreen} {
+      top: 740px;
+      z-index: 1;
+    }
+  }
+
+  #three-points {
+    display: block;
+    text-align: center;
+    background: transparent;
+    margin-bottom: 30px;
+    background-image:url('../../../../assets/img/LandingCloud.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top;
+    height: 450px;
+
+    @media all and (max-width: 991px) {
+      height: 490px;
+    }
+
+    @media all and (max-width: 614px) {
+      height: 564px;
+    }
+
+    @media #{$smallDesktopScreen} {
+      height: 466px !important;
+    }
+
+    @media #{$largeMobileScreen} {
+      height: 545px;
+    }
+  
+    .three-points-title {
+      width: 100%;
+      margin: 5px 0;
+      padding: 0 15px;
+
+      span {
+        font-size: 2rem;
+        border-bottom: 8px solid $colorPrimary;
+
+        @media #{$largeMobileScreen} {
+          font-size: 1.5rem;
+          font-weight: bold;
+        }
+      }
+    }
+
+    .three-points-container {
+      width: 25%;
+      margin: 10px auto;
+    }
+
+    .three-points-image {
+      min-height: 127px;
+      font-size: 3rem;
+      padding: 15px 5px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      overflow: hidden;
+      border: 4px solid $colorPrimary;
+      border-radius: 5px;
+      background: #ffffff;
+      margin: 25px 0;
+      -webkit-box-shadow: 4px 7px 5px 1px rgba(0,0,0,0.4);
+      -moz-box-shadow: 4px 7px 5px 1px rgba(0,0,0,0.4);
+      box-shadow: 4px 7px 5px 1px rgba(0,0,0,0.4);
+    }
+
+    .three-points-description {
+      span {
+        text-align: center;
+
+        @media #{$largeMobileScreen} {
+          font-size: .7rem;
+        }
+      }
+    }
+  }
+
+img.cover-image-source {
+  position: absolute;
+  width: 2684.16px;
+  height: 960px;
+  top: 0px;
+  left: 50%;
+  -ms-transform: translate(-50%, 0%); /* IE 9 */
+  -webkit-transform: translate(-50%, 0%); /* Safari */
+  transform: translate(-50%, 0%);
+}

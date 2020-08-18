@@ -1,0 +1,126 @@
+@import './../../../../assets//designs/variables';
+@import './../../../../assets//designs/variables';
+
+$colors: ($colorSecondary, $colorLightGrey, $colorQuad, colorDarkBlue(40), colorDarkGreen(10), $colorTertiary);
+
+.client-hero-five {
+  .client-hero-button-group {
+    width: 80%;
+    margin: 24px 0;
+
+    .btn-client-hero-five {
+      font-size: 24px;
+      margin: 0 12px;
+    }
+  }
+
+  .container {
+    > .client-hero-five-step-container {
+      @include flex-row-center(row, space-between, center);
+      @include grid(1fr, auto);
+
+      .client-hero-five-sub-text {
+        margin-top: 12px;
+        font-size: 24px;
+        width: 100%;
+        text-align: right;
+      }
+
+      > .client-hero-five-step {
+        width: 100%;
+        @include grid(1fr 3fr, auto);
+
+        > .client-hero-five-step-title {
+          @include grid-column(1, 1);
+          text-align: left;
+          padding: 12px;
+          font-size: 1.15rem;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+
+          > div:first-child {
+            font-weight: bolder;
+            font-size: 1.25rem;
+          }
+
+          @for $i from 1 through 5{
+            &.content-#{$i}{
+              @include grid-row($i,1);
+            }
+          }
+
+        }
+
+        > .user-guide-step-arrow-down {
+          -ms-grid-column: 2;
+          -ms-grid-column-span: 1;
+          grid-column-start: 2;
+          margin-bottom: 6px;
+
+          @for $i from 1 through 5{
+            &.arrow-#{$i}{
+              color: nth($colors, $i);
+            }
+          }
+        }
+
+        > .guide-content {
+          @include grid-column(2, 1);
+          border: none;
+          border-radius: 4px;
+          white-space: pre-wrap;
+          text-align: center;
+
+          > .important {
+            color: red;
+          }
+
+          @for $i from 1 through 6{
+            &.content-#{$i}{
+              @include grid-row($i,1);
+              background: nth($colors, $i);
+              color: white;
+            }
+          }
+        }
+
+        @media #{$maxLaptopScreen} {
+          width: 300px;
+        }
+
+      }
+
+      @media #{$largeMobileScreen} {
+        @include flex-row-center(column, space-between, center);
+      }
+    }
+  }
+
+  .client-hero-five-sub-title {
+    text-align: left;
+    font-size: 32px;
+    margin: 16px 12px;
+  }
+  @media #{$largeMobileScreen} {
+    min-height: 50vh;
+
+    .client-hero-five-sub-title {
+      text-align: center;
+    }
+
+    .client-hero-button-group {
+      width: 80%;
+      margin: 12px 0 16px 0 !important;
+    }
+
+    .container {
+      > .client-hero-five-step-container {
+        > .client-hero-five-step {
+          width: 100%;
+          @include grid(1fr 3fr, auto);
+        }
+      }
+    }
+  }
+}

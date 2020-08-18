@@ -1,0 +1,159 @@
+@import '../../../assets/designs/variables';
+
+.job-list > div {
+  > .search-row {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    margin: 0;
+
+    @media #{$maxLaptopScreen} {
+      justify-content: center !important;
+    }
+  }
+
+  > .pagination-area {
+    margin: 12px 0 24px 0;
+  }
+}
+
+#focus-first:focus {
+  outline: none;
+}
+
+.job-list-input-group {
+  margin-bottom: 12px;
+
+  @media #{$maxTabletScreen} {
+    .input-field {
+      width: 100% !important;
+    }
+  }
+}
+
+.job-list-input-group > .input-field > label {
+  margin-top: 0;
+}
+
+.job-offer-list-background {
+  min-height: 100vh;
+}
+
+.page-number-footer {
+  display: block;
+  width: 100%;
+
+  #page-numbers {
+    list-style: none;
+    display: flex;
+  }
+  
+  #page-numbers > li {
+    color: #ffffff;
+    user-select: none;
+    cursor: pointer;
+    background: $colorTertiary;
+    padding: 10px 15px;
+    border: 1px solid #ffffff;
+    margin: 0;
+
+    &:hover {
+      background: #ffffff;
+      color: $colorTertiary;
+      border: 1px solid $colorTertiary;
+    }
+  }
+}
+
+.search-row-button {
+  justify-content: flex-end;
+  display: flex;
+  
+  .btn-search {
+    background: #f88561;
+    color: white;
+    margin-top: 12px;
+    width: 100%;
+    font-size: 1.2rem;
+    flex
+  
+    &:hover {
+      color: white;
+      background: #ff9474;
+    }
+
+    .search-icon {
+      margin: 0 4px;
+      font-size: 1rem;
+    }
+
+    @media #{$maxTabletScreen} {
+      margin: 12px 0px !important;
+    }
+  
+  }
+
+  .btn-secondary {
+    margin-top: 12px;
+    font-size: 1.2rem;
+
+    @media #{$largeMobileScreen} {
+      width: 100%;
+    }
+  }
+}
+
+.job-list-input-2 {
+  @media all and (max-width: 768px) {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-top: 12px;
+  }
+}
+
+@media all and (max-width: 767px) {
+  .job-list > .search-row {
+    margin: 0;
+  }
+  .job-list-input-group {
+    flex-direction: column;
+  
+    > .input-field {
+      width: 290px;
+      margin: 0;
+    }
+  }
+  .search-row-button > .btn-search {
+      background: #f88561;
+      color: white;
+      margin: 12px;
+      width: 100%;
+      font-size: 1.2rem;
+    
+      &:hover {
+        color: white;
+        background: #ff9474;
+      }
+  
+      .search-icon {
+        margin: 0 4px;
+        font-size: 1rem;
+      }
+  }
+}
+
+.page-title-job {
+  margin-top: 0px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.job-list-no-data-found {
+  margin-top: 12rem !important;
+  font-size: 1.25rem;
+}
+
+.jobs-list-bottom-results {
+  margin: 0px 24px 24px 24px;
+}

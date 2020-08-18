@@ -1,0 +1,136 @@
+@import '../../../../assets/designs/_variables.scss';
+
+input[type=date] {
+    flex-direction: row;
+}
+
+.input-row {
+    width: 100%;
+    margin-bottom: 8px;
+    flex-direction: row;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-content: flex-start;
+
+    .fname, .lname, .fkana,
+    .lkana, .zip_code, .bank_info, .gender {
+      width: 48%;
+      margin: 0;
+    }
+
+    .mailsetting {
+      width: 48%;
+    }
+
+    .birthday {
+      width: 30%;
+    }
+
+    .station{
+      width: 48%;
+      margin: 0;
+    }
+}
+
+.gender > label,
+.birthday > label,
+.mailsetting > label {
+    margin-top: 0;
+}
+
+.mailsetting {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+  .birthday-input {
+    width: 100% !important;
+    padding: 17px 7px;
+  }
+
+  .errorNone {
+    padding: 0.75em 0;
+  }
+
+  .border-setting{
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #d4d4d4;
+    border-radius: 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    label {
+      margin-top: 0;
+      margin-right: 4px;
+    }
+  }
+
+  .breadcrumb-register > li {
+    margin: 0;
+  }
+
+  .selectbank-branch {
+    font-size: 12px !important;
+    margin: 0 !important;
+    text-decoration: underline;
+    color: blue;
+    cursor: pointer;
+  }
+
+  .clear-bank {
+    margin: 0 0 5px 0;
+    font-size: 12px !important;
+    text-decoration: underline;
+    color: blue;
+    cursor: pointer;
+  }
+
+  .no-mgb {
+    margin-bottom: 1px !important;
+  }
+
+  .registration-form2-title{
+    font-weight: normal;
+    text-align: center;
+  }
+
+  .external-link {
+    padding-left: 10px;
+  }
+
+  .register-form2-banner {
+    color: rgb(36, 121, 233);
+    font-size: 1.25rem;
+    margin: 12px;
+    background: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+      > div {
+        padding: 1px 0;
+        &:nth-child(1) {
+          flex-grow: 1;
+        }
+
+        &:nth-child(2) {
+          flex-grow: 2;
+        }
+
+        &:nth-child(3) {
+          flex-grow: 1;
+        }
+      }
+
+      .line {
+        background: rgb(36, 121, 233);
+      }
+    
+      h4 {
+        font-weight: 600;
+      }
+  }

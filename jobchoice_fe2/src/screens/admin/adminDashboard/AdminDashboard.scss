@@ -1,0 +1,108 @@
+@import '../../../assets/designs/variables';
+
+@media #{$largeMobileScreen} {
+  .rt-thead, .rt-tbody{
+    width: 800px;
+  }
+}
+
+.user-dashboard-left {
+    margin-right: 5px;
+    min-height: 100vh;
+    height: 100%;
+    background: #ffffff;
+
+    @media all and (max-width: 767px) {
+        margin-right: 0;
+    }
+
+    @media #{$mobileScreen} {
+      min-height: unset;
+      height: unset;
+    }
+
+    .admin-dashboard-left-title {
+        color: #111111;
+        font-weight: 600;
+        font-size: 1.5rem;
+        padding: 10px 10px 10px 30px;
+        border-bottom: 1px solid #cccccc;
+    }
+
+    .admin-dashboard-profile-buttons {
+      margin-top: 20px;
+
+      .user-dashboard-profile-list-item {
+          padding: 0;
+          margin: 0px;
+          border: none;
+          border-radius: 0;
+
+        &.active {
+          text-decoration: none;
+          background: lighten($colorSecondary, 20%);
+          z-index: 0;
+
+          a {
+            color: #ffffff;
+          }
+        }
+
+        a {
+          display:block;
+          padding: 15px 32px;
+          color: $colorTertiary;
+          transition: 200ms;
+
+          &:hover {
+            text-decoration: none;
+            background: lighten($colorSecondary, 10%);
+            color: #ffffff;
+          }
+
+          @media #{$laptopScreen} {
+            padding: 16px;
+          }
+
+          @media #{$tabletScreen} {
+            padding: 16px;
+            text-align: center;
+          }
+
+          .icon-space {
+            float: right;
+
+            @media #{$tabletScreen} {
+                display: none;
+            }
+          }
+          span {
+            height: 100%;
+          }
+        }
+      }
+    }
+}
+
+.admin-background {
+    background: white;
+}
+
+.admin-manage-top {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 12px 12px 12px 0;
+
+    h3 {
+        margin: 0;
+    }
+}
+
+.manage-job-table-area, .manage-accounts-table-area {
+    margin-bottom: 12px;
+}
+
+.admin-details-title {
+  margin-top: 20px;
+}

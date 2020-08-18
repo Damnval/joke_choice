@@ -1,0 +1,54 @@
+@import '../../../../assets/designs/variables';
+
+.hatarakikata-list-container {
+  border: 1px solid #cccccc;
+  border-radius: 4px;
+  padding: 4px;
+  padding-bottom: 16px;
+  min-height: 260px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.display-hatarakikata-image-area {
+  display: flex;
+  flex-direction: column;
+}
+
+.display-hatarakikata-image-center {
+  justify-content: center;
+  align-content: center;
+  padding: 4px 8px;
+
+  .hatarakikata-image {
+
+    @media #{$mobileScreen} {
+      width: 240px;
+    }
+
+    @media #{$tabletScreen} {
+      width: 160px;
+      margin: 4px;
+    }
+
+    @media #{$laptopScreen} {
+      width: 200px;
+      margin: 6px;
+    }
+
+    @media #{$desktopScreen} {
+      width: 120px;
+      margin: 4px;
+    }
+  }
+}
+
+.hataraki-kata-button-holder {
+  display: flex;
+  justify-content: center;
+}
+
+.no-hataraki-kata {
+  margin: 20px 0;
+}

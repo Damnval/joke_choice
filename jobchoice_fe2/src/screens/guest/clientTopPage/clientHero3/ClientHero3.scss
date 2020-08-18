@@ -1,0 +1,121 @@
+@import './../../../../assets//designs/variables';
+
+.client-hero-three {
+  .client-hero-button-group {
+    width: 80%;
+    margin: 24px 0;
+
+    .btn-client-hero-three {
+      font-size: 24px;
+      margin: 0 12px;
+    }
+  }
+
+  .container {
+    > .client-hero-three-category-container {
+      @include flex-row-center(row, space-between, center);
+
+      > .client-hero-three-category {
+        width: 340px;
+        height: 460px;
+        border: 1px solid #cccccc;
+        border-radius: 4px;
+        background: #4472C4;
+
+        > .client-hero-three-category-title {
+          font-size: 26px;
+          padding: 20px 8px;
+          height: 120px; 
+          color: white;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          flex-direction: column;
+        }
+
+        > .client-hero-three-category-img {
+          text-align: center;
+          margin: 0 auto;
+          width: 338px;
+          height: 340px;  
+          object-fit: cover;
+          overflow: hidden;
+          position: relative;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          border-radius: 0 0 4px 4px;
+
+          > img {
+            @include img-fit();
+          }
+        }
+
+        @media #{$maxLaptopScreen} {
+          width: 300px;
+          height: 420px;
+
+          > .client-hero-three-category-img {
+            text-align: center;
+            margin: 0 auto;
+            width: 300px;
+            height: 300px;  
+            object-fit: cover;
+            overflow: hidden;
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 0 0 4px 4px;
+  
+            > img {
+              @include img-fit();
+            }
+          }
+        }
+
+      }
+
+      @media #{$largeMobileScreen} {
+        @include flex-row-center(column, space-between, center);
+      }
+    }
+  }
+
+  .client-hero-three-sub-title {
+    text-align: left;
+    font-size: 32px;
+    margin: 16px 20px;
+  }
+  @media #{$largeMobileScreen} {
+    min-height: 50vh;
+
+    > .client-hero-img {
+      width: 90%;
+    }
+
+    .client-hero-title {
+      font-size: 26px !important;
+      width: 100vw;
+      margin-top: 12px;
+
+      > .client-hero-description {
+        font-size: 16px;
+        padding: 6px 12px;
+      }
+    }
+
+    .client-hero-three-sub-title {
+      text-align: center;
+    }
+
+    .client-hero-three-category {
+      margin-bottom: 24px;
+    }
+
+    .client-hero-button-group {
+      width: 80%;
+      margin: 12px 0 16px 0 !important;
+    }
+  }
+}

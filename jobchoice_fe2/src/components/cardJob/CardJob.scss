@@ -1,0 +1,166 @@
+@import '../../assets/designs/variables';
+
+.job-card {
+    min-height: 516px;
+    width: 100%;
+    margin: 15px 0;
+    border: 1px solid #eeeeee;
+    border-radius: 6px;
+    box-sizing: border-box;
+    font-family: $enFont;
+    transition: 300ms;
+
+    &.no-hataraki-kata {
+        min-height: auto;
+    }
+
+    &:hover {
+        -webkit-box-shadow: 2px 2px 10px 3px rgba(204,204,204,.3);
+        -moz-box-shadow: 2px 2px 10px 3px rgba(204,204,204,.3);
+        box-shadow: 2px 2px 10px 3px rgba(204,204,204,.3);
+        cursor: pointer;
+    }
+}
+
+@media #{$mobileScreen} {
+    .job-card{
+        .hatarakikata-image {
+            width: 100% !important;
+            height: 83% !important;
+        }
+    }
+  }
+
+@media #{$tabletScreen} {
+    .job-card{
+        .hatarakikata-image {
+            width: 100% !important;
+            height: 83% !important;
+        }
+    }
+}
+
+  @media #{$laptopScreen} {
+    .job-card{
+        .hatarakikata-image {
+            width: 100% !important;
+            height: 83%;
+        }
+    }
+  }
+
+  @media #{$desktopScreen} {
+    .job-card{
+        .hatarakikata-image {
+            width: 100% !important;
+            height: 83%;
+        }
+    }
+  }
+
+.job-card-title {
+    padding: 15px 10px 5px 10px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.job-card-salary {
+    display: flex;
+    justify-content: space-between;
+
+    .job-card-salary-flag {
+        margin: 5px 0 10px 0;
+        display: flex;
+    
+        .ribbon-tip {
+            width: 0;
+            height: 0;
+            border-style: solid;
+            border-width: 20px 0 20px 25px;
+            border-color: transparent transparent transparent #ffffff;
+            background: #D7CD09;
+        }
+    
+        span {
+            padding: 5px 10px 5px 15px;
+            font-size: 19px;
+            background-image: linear-gradient(to right, #D7CD09 , #C1A901);
+            color: #ffffff;
+        }
+
+        .smaller {
+            font-size: small;
+            background: inherit
+        }
+    }
+}
+
+.job-card-job-title {
+    text-align: center;
+    font-size: 1.3rem;
+    color: $colorSecondary;
+}
+
+.job-card-image {
+    height: 140px;
+    margin: 10px 20px;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+
+    > img {
+        object-fit: cover;
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: 50% 50%;
+        border-radius: 4px;
+        width: 100%;
+        height: 100%;
+    }
+}
+
+.job-card-desciption {
+    margin: 10px 20px;
+    text-align: center;
+
+    div {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+    }
+}
+
+.job-card-hatarakikata {
+    margin: 10px 20px;
+
+    > .row > div > .hatarakikata-image {
+        width: 100%;
+        margin: 0;
+    }
+}
+
+.no-item {
+    margin-left: 10px;
+}
+
+.job-card-salary .job-card-salary-flag span:nth-child(1) {
+    background: none !important;
+    margin: 0;
+    padding-right: 0px;
+}
+
+.job-card-other-info {
+    margin: 10px 33px 0 33px;
+}
+
+.job-card-other-info p {
+    margin: 0 0 5px 0;
+    text-transform: capitalize;
+}
+
+.flip-card-inner > img {
+    width: 100%;
+    height: 100%;
+}

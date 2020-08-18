@@ -1,0 +1,101 @@
+.background-dynamic {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.ReactModal__Overlay {
+    opacity: 0;
+    transition: opacity 200ms ease-in-out;
+}
+
+.ReactModal__Overlay--after-open{
+    opacity: 1;
+    z-index: 2;
+}
+
+.ReactModal__Overlay--before-close{
+    opacity: 0;
+}
+
+.confirmation-modal {
+    border: 0;
+    border-radius: 6px;
+    bottom: auto;
+    left: 50%;
+    position: fixed;
+    right: auto;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    width: 300px;
+    background: white;
+
+    .confirmation-modal-message {
+        font-size: .9rem;
+    }
+
+    .confirmation-modal-icon {
+        color: #888888;
+        font-size: 5.5rem;
+        margin-top: -45px;
+        background: white;
+        border-radius: 50%;
+    }
+
+    .dialog__content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+.confirmation-header {
+    background: #eeeeee;
+    border-bottom: white;
+    border-radius: 6px 6px 0 0;
+    height: 80px;
+}
+
+
+.modal-body, .modal-footer {
+    display: block;
+    width: 100%;
+    text-align: center;
+}
+
+.modal-footer-confirmation {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.btn-modal-footer {
+    width: 50%;
+    height: 70px;
+    &:first-child {
+        border-radius: 0 0 0 6px;
+        border: none;
+        border-top: .5px solid #cccccc;
+        border-right: .5px solid #cccccc;
+        background: #fafafa;
+        color: darken(#28a745, 20%);
+        font-weight: 600;
+        &:hover {
+            background: lighten(#28a745, 20%);
+        }
+    }
+    &:last-child {
+        border-radius: 0 0 6px 0;
+        border: none;
+        border-top: .5px solid #cccccc;
+        background: #fafafa;
+        color: darken(#dc3545, 20%);
+        font-weight: 600;
+        &:hover {
+            background: lighten(#dc3545, 20%);
+        }
+    }
+}

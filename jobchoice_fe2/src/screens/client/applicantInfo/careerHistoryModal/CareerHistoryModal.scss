@@ -1,0 +1,82 @@
+@import '../../../../assets/designs/variables';
+
+.background-dynamic {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.ReactModal__Overlay {
+    opacity: 0;
+    transition: opacity 200ms ease-in-out;
+}
+
+.ReactModal__Overlay--after-open{
+    opacity: 1;
+}
+
+.ReactModal__Overlay--before-close{
+    opacity: 0;
+}
+
+.educational-modal-header {
+    width: 100%;
+    height: 3rem;
+    background: $colorQuad;
+    border-radius: 8px 8px 0 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 16px;
+
+    span {
+        font-weight: 600;
+        font-size: 1.2rem;
+        color: #353535;
+    }
+}
+
+.modal-body {
+    display: block;
+    width: 100%;
+    text-align: center;
+}
+
+.career-row {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    border: 1px solid #cccccc;
+    border-radius: 6px;
+    padding: 8px;
+    margin-bottom: 8px;
+
+    .applicant-position {
+        font-size: 1.1rem;
+        font-weight: 600;
+        margin-right: 6px;
+    }
+
+    .applicant-details {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        text-align: left;
+        font-weight: 500;
+
+        > div > span {
+            font-weight: 400;
+        }
+    }
+}
+
+.btn-educational-close {
+    padding: 0;
+}
+
+.null-data {
+    padding: 12px 0;
+}

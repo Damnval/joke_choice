@@ -1,0 +1,36 @@
+input {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+  
+  label {
+    font-size: 1rem;
+    margin-bottom: 0.25em;
+    margin-top: 12px;
+    color: #222;
+    font-weight: lighter;
+  }
+
+  select {
+      width: 100%;
+  }
+
+  .errorMessage {
+    color: red;
+    font-size: 0.75em;
+    display: relative;
+    padding: 0 10px;
+  }
+
+  .required {
+    color: red;
+  }
+
+  .border-error {
+    border-color: red;
+  }
+
+  .errorNone {
+    padding: 0.75em 0;
+  }

@@ -1,0 +1,13 @@
+.flex {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+
+.form-row {
+  width: 100%;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 10px 0;
+  word-wrap: break-word;
+}

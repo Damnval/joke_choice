@@ -1,0 +1,149 @@
+@import '../../../assets/designs/variables';
+
+.breadcrumb-applicant {
+  background-color: white;
+  border-bottom: 3px solid rgba(255, 145, 0, 0.8);
+  border-radius: 0;
+  font-size: 1.25rem;
+  padding: 12px 0;
+  font-weight: 600;
+  color: rgba(255, 145, 0, 0.5);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+  Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+
+  a {
+    color: rgba(255, 145, 0, 1);
+  }
+}
+
+.applicant-info-1 {
+  margin-top: 30px;
+}
+
+.applicant-title {
+  margin-top: 20px;
+  padding-bottom: 2px;
+  font-size: 1.5rem;
+  font-weight: 500;
+  border-bottom: 2px solid black;
+}
+
+.applicant-picture {
+  border: 1px solid black;
+  border-radius: 50%;
+  width: 12rem;
+  height: 12rem;
+
+  > img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+  }
+}
+
+.info-container {
+  margin-top: 20px;
+  margin-bottom: 32px;
+}
+
+.data-row {
+  margin-top: 12px;
+}
+
+.label, .data, .applicant-note, .data-multiple {
+  border: 1px solid #cccccc;
+  border-radius: 4px;
+  padding: 6px 12px;
+}
+
+.label {
+    margin: 0;
+    background: #eeeeee;
+}
+
+.applicant-note {
+  margin: 6px 0;
+  background: #eeeeee;
+}
+
+.saved-notif {
+  background: lighten($colorGreen, 20%);
+  color: white;
+  padding: 2px 4px;
+  border: 1px solid $colorGreen;
+  border-radius: 4px;
+  font-size: .75rem;
+  margin-left: 8px;
+}
+
+.loading-notif {
+  background: lighten(#5ac6da, 20%);
+  color: black;
+  padding: 2px 4px;
+  border: 1px solid #5ac6da;
+  border-radius: 4px;
+  font-size: .75rem;
+  margin-left: 8px;
+}
+
+.application-history-grid {
+  display: grid;
+  display: -ms-grid;
+  -ms-grid-columns: 25% 25% 25% 25%;
+  -ms-grid-rows: 50% 50%;
+  grid-template-columns: 25% 25% 25% 25%;
+  grid-template-rows: 50% 50%;
+  width: 100%;
+  margin-bottom: 60px;
+  border-top: 1px solid black;
+  border-left: 1px solid black;
+
+  > .application-history-headers, .application-history-data {
+    grid-column: span 4;
+    display: grid;
+    display: -ms-grid;
+    -ms-grid-columns: 25% 25% 25% 25%;
+    -ms-grid-column-span: 4;
+    grid-template-columns: 25% 25% 25% 25%;
+    text-align: center;
+    border-bottom: 1px solid black;
+    > div {
+      padding: 12px;
+      border-right: 1px solid black;
+
+      @for $i from 1 through 5{
+        &.sub-header-#{$i}{
+          -ms-grid-column:#{$i};
+        }
+      }
+
+      @for $i from 1 through 5{
+        &.sub-data-#{$i}{
+          -ms-grid-column:#{$i};
+        }
+      }
+    }
+  }
+
+  > .application-history-headers {
+    background: #cccccc;
+  }
+
+}
+
+.offer-detail-background {
+  min-height: 100vh;
+}
+
+@media #{$desktopScreen} {
+  .applicant-grid {
+    min-width: 1356px;
+  }
+}
+
+
+@media (max-width: 768px) {
+  .grid-container {
+    justify-content: flex-start;
+  }
+}

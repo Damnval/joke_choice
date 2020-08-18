@@ -1,0 +1,112 @@
+@import '../../../../../../assets/designs/variables';
+
+.background-dynamic {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.ReactModal__Overlay {
+    opacity: 0;
+    transition: opacity 200ms ease-in-out;
+}
+
+.ReactModal__Overlay--after-open{
+    opacity: 1;
+}
+
+.ReactModal__Overlay--before-close{
+    opacity: 0;
+}
+
+.modal-body {
+    display: block;
+    width: 100%;
+    text-align: center;
+}
+
+.null-data {
+    padding: 12px 0;
+}
+
+.hatarakikata-modal-header {
+  width: 100%;
+  height: 3rem;
+  background: $colorQuad;
+  border-radius: 8px 8px 0 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 16px;
+}
+
+.hatarakikata-modal-title {
+  font-weight: 500;
+  font-size: 1.1rem;
+  border: 1px solid $colorQuad;
+  background: lighten($colorQuad, 40%);
+  color: #222222;
+  border-radius: 6px;
+  padding: 12px;
+  margin-bottom: 12px;
+}
+
+.hatarakikata-modal-message {
+  padding: 20px 60px;
+}
+
+.hatarakikata-modal-info {
+  font-weight: 500;
+  padding: 20px 60px;
+  color: rgb(143, 45, 16);
+}
+
+.hatarakikata-modal-footer {
+  width: 100%;
+  text-align: center;
+  display: flex;
+  -ms-flex-align: center;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem;
+  border-top: 1px solid #dee2e6;
+  border-bottom-right-radius: .3rem;
+  border-bottom-left-radius: .3rem;
+}
+
+.hatarakikata-registration-modal {
+  border: 0;
+  border-radius: 8px;
+  bottom: auto;
+  left: 50%;
+  position: fixed;
+  right: auto;
+  top: 50%;
+  transform: translate(-50%,-50%);
+  width: 640px;
+  background: white;
+}
+
+@media #{$mobileScreen} {
+  .hatarakikata-registration-modal {
+    width: 95%;
+  }
+
+  .hatarakikata-modal-message {
+    padding: 12px;
+  }
+}
+
+@media #{$tabletScreen} {
+  .hatarakikata-registration-modal {
+    width: 95%;
+    max-width: 640px;
+  }
+
+  .hatarakikata-modal-message {
+    padding: 12px;
+  }
+}

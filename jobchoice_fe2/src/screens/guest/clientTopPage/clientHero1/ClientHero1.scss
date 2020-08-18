@@ -1,0 +1,85 @@
+@import './../../../../assets//designs/variables';
+
+.client-hero-one {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+  > .client-hero-img {
+    width: 100%;
+    height: 95vh;
+  }
+
+  > .client-hero-title {
+    position: absolute;
+    width: 100vw;
+    height: 100%;
+    text-align: center;
+    font-size: 60px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    > div {
+
+      &:nth-child(2) {
+        margin-left: 80px;
+      }
+    }
+
+    > .client-hero-description {
+      text-align: center;
+      font-size: 28px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      background: white;
+      color: black;
+      padding: 16px;
+      border-radius: 8px;
+      margin-top: 12px;
+
+      .client-hero-important {
+        color: red;
+      }
+    }
+
+    @media #{$largeMobileScreen} {
+      font-size: 30px;
+      width: 100vw;
+
+      > .client-hero-description {
+        font-size: 16px;
+        padding: 6px 12px;
+      }
+
+      > div {
+
+        &:nth-child(2) {
+          margin-left: 20px;
+        }
+      }
+    }
+  }
+
+  @media #{$largeMobileScreen} {
+    > .client-hero-img {
+      height: 30vh;
+    }
+
+    .client-hero-title {
+      font-size: 24px;
+      width: 100vw;
+
+      > .client-hero-description {
+        font-size: 16px;
+        padding: 6px 12px;
+      }
+    }
+  }
+
+}

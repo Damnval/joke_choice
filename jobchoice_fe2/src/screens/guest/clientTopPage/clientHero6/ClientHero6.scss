@@ -1,0 +1,104 @@
+@import './../../../../assets//designs/variables';
+@import './../../../../assets//designs/variables';
+
+
+.client-hero-six {
+  .client-hero-button-group {
+    width: 80%;
+    margin: 24px 0;
+
+    .btn-client-hero-six {
+      font-size: 24px;
+      margin: 0 12px;
+    }
+  }
+
+  .container {
+    > .client-hero-six-container {
+      @include flex-row-center(row, space-between, center);
+      @include grid(1fr, auto);
+
+      > .client-q-a-container {
+        width: 100%;
+        @include grid(auto, auto);
+        font-size: 1.25rem;
+
+        > .client-q-a-container-question {
+          @include grid(1fr 10fr, auto);
+          @include grid-column(1, 2);
+          @include grid-row(1,1);
+          margin-left: 12px;
+
+          > .label {
+            @include grid-column(1, 1);
+            @include grid-row(1,1);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            @include width-height(60px);
+            background: none;
+            border: none;
+          }
+
+          > .text {
+            @include grid-column(2, 1);
+            @include grid-row(1,1);
+            display: flex;
+            align-items: center;
+          }
+        }
+        > .client-q-a-container-answer {
+          @include grid(1fr 10fr, auto);
+          @include grid-column(1, 2);
+          @include grid-row(2,1);
+          margin: 0px 0px 6px 12px;
+          padding: 6px 0px;
+
+          > .label {
+            @include grid-column(1, 1);
+            @include grid-row(1,1);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            @include width-height(60px);
+            background: none;
+            border: none;
+          }
+
+          > .text {
+            @include grid-column(2, 1);
+            @include grid-row(1,1);
+            display: flex;
+            align-items: center;
+          }
+        }
+
+        @media #{$maxLaptopScreen} {
+          width: 300px;
+        }
+
+      }
+
+      @media #{$largeMobileScreen} {
+        @include flex-row-center(column, space-between, center);
+
+        > .client-q-a-container {
+          width: 100%;
+        }
+      }
+    }
+  }
+
+  .client-hero-six-sub-title {
+    text-align: left;
+    font-size: 32px;
+    margin: 16px 12px;
+  }
+  @media #{$largeMobileScreen} {
+    min-height: 50vh;
+
+    .client-hero-six-sub-title {
+      text-align: center;
+    }
+  }
+}

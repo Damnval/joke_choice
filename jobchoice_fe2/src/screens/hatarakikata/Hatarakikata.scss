@@ -1,0 +1,433 @@
+@import '../../assets/designs/variables';
+
+$choices-panel-width: 520 !default;
+$hatarakikata-panel-width: 440 !default;
+$panel-height: 580 !default;
+$card-num: 3 !default;
+$hatarakikata-num: 3 !default;
+$card-width: ($choices-panel-width - 22)/$card-num !default;
+$card-height: ($panel-height - 22)/$card-num !default;
+$card-margin: 5 !default;
+
+.page-row {
+  margin-bottom: 40px;
+}
+
+.hatarakikata-page-header {
+  border-bottom: 1px solid #cccccc;
+  padding-bottom: 16px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  align-items: center;
+
+  > span {
+    text-align: center;
+  }
+
+  >.btn {
+    margin-left: 12px;
+    padding: 0;
+
+    &.btn-hatarakikata-info {
+      color: $colorGreen;
+      line-height: .8rem;
+
+      &:hover {
+        color : lighten($colorGreen, 20%);
+      }
+    }
+  }
+}
+
+.hatarakikata-panel-container {
+  border: 1px solid #cccccc;
+  background: #fbfbfb;
+  border-radius: 6px;
+  padding: 10px;
+  width: #{$choices-panel-width}px;
+  height: #{$panel-height}px;
+  display: grid;
+  display: -ms-grid;
+  grid-template-columns: repeat(3, #{$card-width}px);
+  grid-template-rows: repeat(3, #{$card-height}px);
+  -ms-grid-columns: repeat(3, #{$card-width}px);
+  -ms-grid-rows: repeat(3, #{$card-height}px);
+}
+
+@for $i from 1 through 8{
+  .ms-#{$i}-exit{
+    opacity: 0;
+    transition: opacity #{$i * 300}ms;
+  }
+}
+
+.hatarakikata-panel {
+  width: #{$card-width - ($card-margin * 2)}px;
+  height: #{$card-height - ($card-margin * 2)}px;
+  margin: #{$card-margin}px;
+  padding: 0;
+  background: white;
+  border: 4px solid #333333;
+  font-size: .75rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  transition: transform 1s;
+
+  &.btn:hover {
+    transform: scale(1.1);
+    height: 200px;
+    text-overflow: unset;
+
+    >.hatarakikata-description > span {
+      text-overflow: unset;
+      display: flex;
+    }
+  }
+
+  > img {
+    width: 100%;
+    height: 80%;
+    background: white;
+
+    &.select-hatarakikata-image {
+      height: 70%;
+    }
+  }
+
+  >.hatarakikata-description {
+    display: flex;
+    display: -ms-flex;
+    justify-content: center;
+    align-items: center;
+    height: 30%;
+    width: 100%;
+    padding: 0 8px;
+    border-top: 0;
+    font-size: .7rem;
+    background-color: lighten($colorPrimary, 25%);
+    -ms-grid-column-span: 1;
+    -ms-grid-row-span: 1;
+
+    > span {
+      overflow: hidden;
+      text-overflow: ellipsis;
+      display: -webkit-box;
+      -webkit-line-clamp: 3;
+      -webkit-box-orient: vertical;
+    }
+  }
+
+  &.panel-0 {
+    grid-column-start: 1;
+    grid-row-start: 1;
+    -ms-grid-column: 1;
+    -ms-grid-row: 1;
+  }
+
+  &.panel-1 {
+    grid-column-start: 2;
+    grid-row-start: 1;
+    -ms-grid-column: 2;
+    -ms-grid-row: 1;
+  }
+
+  &.panel-2 {
+    grid-column-start: 3;
+    grid-row-start: 1;
+    -ms-grid-column: 3;
+    -ms-grid-row: 1;
+  }
+
+  &.panel-3 {
+    grid-column-start: 3;
+    grid-row-start: 2;
+    -ms-grid-column: 3;
+    -ms-grid-row: 2;
+  }
+
+  &.panel-4 {
+    grid-column-start: 3;
+    grid-row-start: 3;
+    -ms-grid-column: 3;
+    -ms-grid-row: 3;
+  }
+
+  &.panel-5 {
+    grid-column-start: 2;
+    grid-row-start: 3;
+    -ms-grid-column: 2;
+    -ms-grid-row: 3;
+  }
+
+  &.panel-6 {
+    grid-column-start: 1;
+    grid-row-start: 3;
+    -ms-grid-column: 1;
+    -ms-grid-row: 3;
+  }
+
+  &.panel-7 {
+    grid-column-start: 1;
+    grid-row-start: 2;
+    -ms-grid-column: 1;
+    -ms-grid-row: 2;
+  }
+
+  &.panel-9 {
+    grid-column-start: 2;
+    grid-row-start: 2;
+    -ms-grid-column: 2;
+    -ms-grid-row: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-weight: 600;
+    border-radius: 6px;
+  }
+}
+
+div.hatarakikata-panel {
+  border: 1px solid $colorGrey;
+  border-radius: 6px;
+
+  > img {
+    width: 100%;
+    border-bottom: 1px solid $colorGrey;
+    outline: none;
+    border-radius: 6px 6px 0 0;
+  }
+
+  >.hatarakikata-description {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 30%;
+    width: 100%;
+    padding: 0 12px;
+    border: none;
+    border-radius: 0 0 6px 6px;
+    background-color: lighten($colorPrimary, 40%);
+    font-weight: 600;
+  }
+
+}
+
+.chosen-big-category-button-container {
+  margin-top: 12px;
+
+  button > span {
+    margin-left: 8px;
+    line-height: 10px;
+  }
+}
+
+.chosen-hatarakikata-panel-container {
+  border: 1px solid #cccccc;
+  background: #fbfbfb;
+  border-radius: 6px;
+  padding: 12px;
+  width: #{$hatarakikata-panel-width}px;
+  height: #{$panel-height}px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+  .chosen-hatarakikata-panel-title {
+    margin-bottom: 4px;
+    font-weight: 600;
+    font-size: 1.2rem;
+  }
+
+  .chosen-hatarakikata-panel {
+    display: grid;
+    display: -ms-grid;
+    grid-template-columns: repeat(2, 180px);
+    grid-template-rows: repeat(2, 130px);
+    -ms-grid-columns: repeat(2, 180px);
+    -ms-grid-rows: repeat(2, 130px);
+
+    .chosen-hatarakikata {
+      width: 170px;
+      height: 120px;
+      margin: 5px;
+      border-radius: 8px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      &#hatarakikata-chosen-1 {
+        -ms-grid-column: 1;
+        -ms-grid-row: 1;
+      }
+
+      &#hatarakikata-chosen-2 {
+        -ms-grid-column: 2;
+        -ms-grid-row: 1;
+      }
+
+      &#hatarakikata-chosen-3 {
+        -ms-grid-column: 1;
+        -ms-grid-row: 2;
+      }
+
+      &#hatarakikata-chosen-4 {
+        -ms-grid-column: 2;
+        -ms-grid-row: 2;
+      }
+    }
+
+  }
+}
+
+.hatarakikata-message-row {
+  width: 520px;
+  margin: 12px 0;
+
+  > img {
+    width: 65px;
+  }
+
+  > .hatarakikata-message-bubble {
+    margin-top: 12px;
+    width: 455px;
+
+    > .tip-message-bubble-box {
+      color: #0a2244;
+      margin-right: -3px;
+    }
+
+    > .hatarakikata-message-bubble-box {
+      border: 4px solid #0a2244;
+      padding: 6px;
+      border-radius: 4px;
+    }
+
+  }
+}
+
+#space-below {
+  margin-top: 66px;
+}
+
+@media #{$tabletScreen} {
+  .chosen-hatarakikata-panel-container {
+    margin-top: 12px;
+    margin-bottom: 12px;
+    width: 520px;
+    height: 460px;
+  }
+
+  #space-below {
+    margin-top: 0px;
+  }
+}
+
+@media #{$mobileScreen} {
+  .hatarakikata-panel-container {
+    border: 1px solid #cccccc;
+    border-radius: 6px;
+    padding: 5px;
+    width: 100%;
+    height: 495px;
+    display: grid;
+    display: -ms-grid;
+    -ms-grid-columns: repeat(3, 33%);
+    -ms-grid-rows: repeat(3, 160px);
+    grid-template-columns: repeat(3, 33%);
+    grid-template-rows: repeat(3, 160px);
+  }
+
+  .hatarakikata-panel {
+    width: 95%;
+    height: 153px;
+    margin: 5px;
+    border: 1px solid #cccccc;
+    font-size: .8rem;
+
+    > img {
+      width: 100%;
+      height: 110px;
+      outline: 3px solid $colorSecondary;
+      background: white;
+      outline-offset: -3px;
+      border-radius: 6px;
+    }
+
+
+    >.hatarakikata-description {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100%;
+      width: 100%;
+      padding: 0 4px;
+      border: 1px solid $colorSecondary;
+      border-top: 0;
+      background-color: lighten($colorPrimary, 25%);
+      font-size: .45rem;
+    }
+  }
+
+  .chosen-hatarakikata-panel-container {
+    margin-top: 12px;
+    margin-bottom: 12px;
+    border: 1px solid #cccccc;
+    background: #fbfbfb;
+    border-radius: 6px;
+    padding: 12px;
+    width: 100%;
+    height: 470px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    .chosen-hatarakikata-panel-title {
+      margin-bottom: 4px;
+      font-weight: 600;
+      font-size: 1.2rem;
+    }
+
+    .chosen-hatarakikata-panel {
+      display: grid;
+      display: -ms-grid;
+      -ms-grid-columns: repeat(2, 175px);
+      -ms-grid-rows: repeat(2, 160px);
+      grid-template-columns: repeat(2, 175px);
+      grid-template-rows: repeat(2, 160px);
+
+      .chosen-hatarakikata {
+        width: unset;
+        height: unset;
+        margin: unset;
+      }
+    }
+  }
+
+  .hatarakikata-message-row {
+    width: 100%;
+  }
+
+  #space-below {
+    margin-top: 0px;
+  }
+}
+
+.submit-hatarakikata-container {
+  margin-top: 16px;
+}
+
+.save-container-hatarakikata {
+  border: 1px solid darken(green, 10%);
+  background: lighten(green, 70%);
+  padding: 8px 40px;
+  border-radius: 8px;
+  color: darken(green, 20%);
+  font-weight: 600;
+  margin-top: 24px;
+}

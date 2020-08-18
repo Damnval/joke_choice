@@ -1,0 +1,122 @@
+@import '../../../assets/designs/_variables.scss';
+
+.search-row-title {
+  font-size: 1.1rem;
+  width: 400px;
+  background: white;
+}
+
+.search-details-individual {
+  margin: 0.5rem 0;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+               Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+
+  .input-field {
+      width: auto;
+  }
+}
+
+.employment-status-container {
+  border: 1px solid rgb(194, 194, 194);
+  border-radius: 4px;
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-content: flex-start;
+  text-align: left;
+}
+
+.hataraki-kata-container {
+  max-height: 360px;
+  overflow-y: scroll;
+}
+
+.working-hours-container > .input-field {
+  margin-right: 8px;
+
+  &:last-child {
+    margin-left: 8px;
+  }
+}
+
+.search-submit-container {
+  margin-bottom: 12px;
+  display: flex;
+  justify-content: center;
+
+  button {
+    padding: 10px 25px;
+    font-size: 1.5rem;
+  }
+}
+
+.search-results {
+  margin-top: 40px;
+
+  > .row h3 {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+                  Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+    text-align: center;
+  }
+}
+
+.no-results {
+  margin: 12px 0 30px 0;
+  text-align: center;
+  justify-content: center;
+}
+
+.breadcrumb-search {
+  background-color: white;
+  border-bottom: 3px solid rgba(255, 145, 0, 0.8);
+  border-radius: 0;
+  font-size: 1.25rem;
+  padding: 12px 0;
+  font-weight: 600;
+  color: rgba(255, 145, 0, 0.5);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+              Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  margin-bottom: 0px;
+  a {
+      color: rgba(255, 145, 0, 1);
+    }
+}
+
+// Safari browser
+@media #{$maxTabletScreen} {
+  .search-form > * {
+    width: 100%;
+    padding: 0;
+    clear: both;
+  }
+  
+  .search-row-title {
+    font-size: 1.1rem;
+    width: 100% !important;
+    background: white;
+    display: block;
+    margin: 0 0 0 0;
+    height: 2vh !important;
+    text-align: left !important;
+  }
+  
+  .search-details-individual {
+    width: 100%;
+    display: block !important;
+    margin-top: 15px !important;
+  }
+  
+  .search-form table td {
+    display: block !important;
+  }
+  
+  .working-hours-container > .input-field:last-child {
+    margin-left: 0px !important;
+  }
+ }
+ 
+ 

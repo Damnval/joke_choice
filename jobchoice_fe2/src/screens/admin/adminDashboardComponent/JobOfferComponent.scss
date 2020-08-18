@@ -1,0 +1,147 @@
+@import '../../../assets/designs/_variables.scss';
+
+.manage-job-area, .manage-account-area {
+    min-height: 90vh;
+}
+
+.manage-job-top {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 2px 10px 12px;
+
+    h3 {
+        margin: 0;
+    }
+}
+
+.col-right {
+    text-align: center;
+}
+
+.centered {
+    text-align: center
+}
+
+.job-offer-management-toggle-table {
+    font-size: 14px;
+}
+
+.job-offer-management-top-header {
+    // background: #ade7b6;
+    background: #adcfe7;
+    font-weight: 600;
+}
+
+.job-offer-management-sub-header {
+    background: #eeeeee;
+}
+
+// Job Offer Management Search Bar
+.job-offer-management-search-data {
+    margin-right: 32px;
+
+    .job-offer-management-search-keyword {
+        font-size: .8rem;
+        padding: 8px;
+        border-radius: 4px;
+        border-color: #bbbbbb;
+        width: 260px;
+    }
+
+    .admin-job-offer-list-radio-box-input-field {
+        display: flex;
+        flex-direction: row;
+
+        > div {
+            margin-right: 12px;
+        }
+    }
+
+    @media #{$maxTabletScreen} {
+      width: 100%;
+      margin: 0;
+
+      .job-offer-management-search-keyword, .shared-job-date-search-data {
+        width: 100%;
+      }
+    }
+}
+
+.job-offer-management-search-container {
+  .shared-job-date-search-data {
+    .client-job-list-search-status {
+      width: 180px;
+    }
+  }
+}
+
+.job-offer-management-publication-badge {
+    padding: 4px 12px;
+    font-size: .8rem;
+    border-radius: 4px;
+
+    &.draft {
+        background: #cccccc;
+      }
+
+      &.published {
+        background: #38a024;
+        color: white
+      }
+
+      &.private {
+        background: #15aabb;
+        color: #ffffff
+      }
+
+      &.post_end {
+        background: #c34b1c;
+        color: #ffffff
+      }
+}
+
+.admin-job-offer-list-search-btn {
+  align-self: flex-end;
+  margin-top: 10px;
+
+  @media #{$largeMobileScreen} {
+    margin: 0;
+    margin-top: 12px;
+    width: 100%;
+  }
+}
+
+.manage-job-table-area {
+  .rt-header-text-area-wrap {
+    white-space: unset !important;
+    display: flex;
+    align-items: center;
+  }
+}
+
+@media #{$maxTabletScreen} {
+  .job-offer-management-search-container {
+    .job-offer-management-search-data {
+      width: 100%;
+      margin: 0;
+    }
+   
+    .job-offer-management-search-keyword, .shared-job-date-search-data {
+      width: 100%;
+
+      .react-datepicker-wrapper {
+        width: 45%;
+
+        > .react-datepicker__input-container {
+          width: 100%;
+
+          .client-job-list-search-date-picker {
+            max-width: 100%;
+          }
+        }
+
+      }
+    }
+  }
+}

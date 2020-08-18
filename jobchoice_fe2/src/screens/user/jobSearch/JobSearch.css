@@ -1,0 +1,71 @@
+/* Job Search */
+.jobsearch {
+    margin: 5em 0;
+}
+
+.jobsearch-hatarakikata {
+    width: 100%;
+    min-height: 25em;
+    border: 1px solid black;
+}
+
+.jobsearch-hatarakikata-title {
+    text-align: center;
+}
+
+.jobsearch-dummy-image {
+    width: 100%;
+    height: 10em;
+    border: 1px solid black;
+    margin: 10px 0;
+}
+
+.jobsearch-inputboxes {
+    min-height: 25em;
+}
+
+.jobsearch-inputboxes-individual {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 25px;
+}
+
+select {
+    padding: 10px 7px;
+    border-radius: 6px;
+}
+
+.jobsearch-results {
+    min-height: 10em;
+}
+
+.keyword-search {
+    padding: 0 12px;
+    border-radius: 2px 0px 0px 2px;
+}
+
+form.keyword {
+  width: auto;
+}
+
+.btn-submit {
+  background-color: rgba(236, 236, 236, 0.979);
+  border-radius: 0px 2px 2px 0px;
+  border: 1px solid #cfcfcf;
+}
+
+.btn-submit:hover {
+  background-color: #5cd7f3;
+  border-color: #5cd7f3;
+  color: white;
+}
+
+.results-container {
+    margin-top: 24px;
+}
+
+.loading-div {
+    font-size: 2.5rem;
+    text-align: center;
+}

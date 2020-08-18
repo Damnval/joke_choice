@@ -1,0 +1,80 @@
+@import '.../../../../assets/designs/variables';
+
+.modal-view-background {
+  overflow-y: scroll;
+  height: 78vh;
+  background: #ffffff;
+  border: 1px solid #cccccc;
+  width: 100%;
+}
+
+.modal-view-approval-background {
+  min-height: 100vh;
+  background: #ffffff;
+}
+
+.modal-view-background-outer {
+  padding: 0 12px 12px 12px;
+}
+
+.job-view-close-modal {
+  width: 100%;
+  justify-content: space-between;
+  display: flex;
+
+  button {
+    float: right;
+    padding: 2px 5px;
+    background: $colorTertiary;
+    color: #ffffff !important;
+    margin: 5px;
+  }
+
+  span {
+    padding: 2px 15px;
+    margin: 5px;
+    background: #5bc0de;
+    color: #ffffff;
+    border-radius: 5px;
+  }
+}
+
+.table-job-detail-smart > tbody > tr {
+  > td {
+    padding-left: 10px;
+  }
+
+  display: grid;
+}
+
+.row-1-smart {
+  grid-template-columns: none !important;
+}
+
+.job-detail-right-info-smart {
+  padding-top: 10px;
+}
+
+.job-detail-tab-btn-outer-smart {
+  margin: 0 !important;
+}
+
+.job-detail-tab-btn-smart {
+  border-radius: 0 !important;
+  width: 100% !important;
+}
+
+.job-detail-tab-buttons-area-smart {
+  display: grid !important;
+  text-align: left;
+}
+
+.modal-view-share-buttons {
+  display: flex;
+  justify-content: center;
+}
+
+.modal-job-details-gallery-container {
+  width: 100% !important;
+}
+

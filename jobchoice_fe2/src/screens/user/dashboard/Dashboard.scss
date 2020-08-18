@@ -1,0 +1,12 @@
+@import '../../../assets/designs/variables';
+
+.user-dashboard-left .user-dashboard-profile-buttons .user-dashboard-profile-list-item.dashboard-background {
+    min-height: 100vh;
+}
+
+@media #{$mobileScreen} {
+  .ReactModal__Content--after-open {
+    width: 80% !important;
+  }
+
+}

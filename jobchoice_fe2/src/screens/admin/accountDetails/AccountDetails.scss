@@ -1,0 +1,471 @@
+@import '../../../assets/designs/variables';
+
+.manage-accounts-area {
+    min-height: 90vh;
+    background: white;
+}
+
+.account-back-button {
+    margin: 15px 0;
+}
+
+.account-details-individual-title, .account-details-individual-value {
+    font-size: 1.25rem;
+}
+
+.account-details-individual-title {
+    font-weight: bold;
+}
+
+.account-details-individual {
+    margin: 0.75rem 0;
+    width: 100%;
+}
+
+.account-details-individual-value {
+    margin: 6px 0;
+}
+
+.account-details-individual-edit {
+    padding: 1px 0;
+    font-size: 1.10rem;
+}
+
+.account-hatarakikata {
+    width: 100px;
+    height: 80px;
+    border: 1px solid black;
+    margin: 6px;
+}
+
+.account-button-area {
+    width: 100%;
+}
+
+.account-buttons {
+    margin: 5px;
+}
+
+///////////////////////////////////////////
+// Job Seeker Details Styles //////////////
+///////////////////////////////////////////
+.account-primary-container, .account-secondary-container {
+    border: 1px solid #dddddd;
+    padding: 20px;
+    box-shadow: none;
+    margin: 0;
+    margin-top: 24px;
+    width: 100%;
+    justify-content: flex-start;
+
+    > .account-full-name {
+        margin-top: 12px;
+        font-size: 1.5rem;
+        font-weight: 600;
+    }
+
+    > .company-full-name {
+        margin-top: 0;
+        font-size: 1.5rem;
+        font-weight: 600;
+    }
+
+    > .account-kana-name {
+        margin-top: 4px !important;
+        > .account-label {
+            justify-content: center;
+            text-align: center;
+            font-size: .7rem !important;
+        }
+
+        > .account-data {
+            justify-content: center;
+            text-align: center;
+        }
+    }
+
+    > .account-row {
+        @include grid(1fr 3fr, auto);
+        border-color: #242424 !important;
+        border-top: 1px solid #242424 !important;
+        margin-top: 0;
+
+        &.profile {
+            @include grid(1fr 2fr, auto);
+            border-bottom: 1px solid #242424 !important;
+            width: 100%;
+
+            .account-label, .account-data {
+                @include flex-row-center();
+            }
+        }
+
+        > .account-label {
+            font-size: 1rem;
+            font-weight: 700;
+            background: #adcfe7;
+            @include grid-row(1,1);
+            @include grid-column(1,1);
+
+            &:first-child {
+                margin-top: 0;
+                border-left: .5px solid #242424 !important;
+            }
+        }
+
+        > .account-data {
+            font-size: 1.1rem;
+            display: flex;
+            flex-direction: row;
+            text-align: center;
+            @include grid-row(1,1);
+            @include grid-column(2,1);
+
+            .account-picture {
+                width: 10rem;
+                height: 10rem;
+            
+                > img {
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+
+            &.notes {
+                @include flex-row-center(row, flex-start, center);
+
+                > ul {
+                    margin: 0;
+                    @include flex-row-center(column, flex-start, flex-start);
+                }
+            }
+        }
+
+        > div {
+            padding: 12px 20px;
+            border-color: #242424 !important;
+        }
+        
+        @media #{$largeMobileScreen} {
+            @include grid(auto, auto);
+            border-bottom: 1px solid #242424 !important;
+
+            > .account-data {
+                border-left: 1px solid #242424 !important;
+            }
+        }
+    
+    }
+
+    > .account-type {
+        font-size: 1rem;
+        background: #eeeeee;
+        padding: 4px 12px;
+        margin-top: 8px;
+        border-radius: 8px;
+        border: 1px solid #dddddd;
+    }
+
+    > .account-row-2, .account-row-3 {
+        @include grid(1fr 1fr, 1fr 1fr);
+        border-color: #242424 !important;
+        border-top: 1px solid #242424 !important;
+        margin-top: 0;
+
+        > .account-label {
+            background: #adcfe7;
+            text-align: center;
+            grid-row-start: 1;
+            -ms-grid-row: 1;
+            -ms-grid-row-span: 1;
+            font-size: .8rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            &.label-1 {
+                @include grid-column(2,1);
+            }
+
+            &.label-2 {
+                @include grid-column(3,1);
+            }
+
+            &.label-3 {
+                @include grid-column(4,1);
+            }
+
+            @media #{$largeMobileScreen} {
+                &:first-child {
+                    border-left: 1px solid #242424 !important;
+                }
+            }
+
+        }
+
+        > .account-data {
+            text-align: center;
+            &.data-1 {
+                @include grid-row(2,1);
+                @include grid-column(2,1);
+            }
+            
+            &.data-2 {
+                @include grid-row(2,1);
+                @include grid-column(3,1);
+            }
+
+            &.data-3 {
+                @include grid-row(2,1);
+                @include grid-column(4,1);
+            }
+        }
+
+        > div {
+            padding: 12px 10px;
+            border-color: #242424 !important;
+        }
+    }
+
+    .account-row-3 {
+        @include grid(100px 2fr 2fr 2fr, 1fr 1fr);
+        border-bottom: none !important;
+        border-top: none !important;
+
+        @media #{$largeMobileScreen} {
+            > .account-label {
+                border-bottom: .5px solid #242424 !important;
+            }
+            .label-1 {
+                border-left: .5px solid #242424 !important;
+            }
+        }
+
+        &:first-child {
+            border-top: 1px solid #242424 !important;
+            border-bottom: .5px solid #242424 !important;
+        }
+
+        .account-generic-label {
+            grid-column-start: 1 !important;
+            grid-row-start: 1 !important;
+            grid-row-end: 3;
+            grid-column-end: 2;
+            @include flex-row-center();
+        }
+
+        .label-1 {
+            grid-column-start: 2;
+            grid-row-start: 1 !important;
+        }
+
+        .label-2 {
+            grid-column-start: 3;
+            grid-row-start: 1 !important;
+        }
+
+        .label-3 {
+            grid-column-start: 4;
+            grid-row-start: 1 !important;
+        }
+
+        .data-1 {
+            grid-column-start: 2 !important;
+            grid-row-start: 2 !important;
+        }
+
+        .data-2 {
+            grid-column-start: 3 !important;
+            grid-row-start: 2 !important;
+        }
+
+        .data-3 {
+            grid-column-start: 4 !important;
+            grid-row-start: 2 !important;
+        }
+    }
+    
+}
+
+.job-seeker-detail-container {
+    width: 100%;
+
+    .account-secondary-container {
+        border: 1px solid #dddddd;
+        padding: 20px;
+        box-shadow: none;
+        margin: 0;
+        margin-top: 24px;
+        width: 100%;
+
+        @media #{$largeMobileScreen} {
+            margin-left: 15px;
+        }    
+    
+        > .account-row {
+            @include grid(1fr 3fr, auto);
+            border-color: #242424 !important;
+            border-top: 1px solid #242424 !important;
+            margin-top: 0;
+    
+            > .account-label {
+                background: #adcfe7;
+                @include grid-row(1,1);
+                @include grid-column(1,1);
+            }
+
+            > div {
+                padding: 12px 20px;
+                border-color: #242424 !important;
+            }
+
+            > .account-data {
+                text-align: center;
+                @include grid-row(1,1);
+                @include grid-column(2,1);
+            }
+
+            
+            @media #{$largeMobileScreen} {
+                @include grid(auto, auto);
+                border-bottom: 1px solid #242424 !important;
+
+                > .account-data {
+                    border-left: 1px solid #242424 !important;
+                }
+            }
+        }
+
+        > .account-row-2 {
+            @include grid(1fr 2fr 1fr 2fr, auto);
+            border-color: #242424 !important;
+            border-top: 1px solid #242424 !important;
+            margin-top: 0;
+    
+            > .account-label {
+                background: #adcfe7;
+            }
+
+            > div {
+                padding: 12px 20px;
+                border-color: #242424 !important;
+            }
+        }
+    }
+}
+
+.client-secondary-container {
+    border: 1px solid #dddddd;
+    padding: 20px;
+    box-shadow: none;
+    margin: 0;
+    margin-top: 24px;
+    width: 100%;
+    justify-content: flex-start;
+
+    > .account-full-name {
+        margin-top: 12px;
+        font-size: 1.5rem;
+        font-weight: 600;
+    }
+
+    > .company-full-name {
+        margin-top: 0;
+        font-size: 1.5rem;
+        font-weight: 600;
+    }
+
+    > .account-kana-name {
+        margin-top: 4px !important;
+        > .account-label {
+            justify-content: center;
+            text-align: center;
+            font-size: .7rem !important;
+        }
+
+        > .account-data {
+            justify-content: center;
+            text-align: center;
+        }
+    }
+
+    > .account-row-2 {
+        @include grid(1fr 1fr 1fr 1fr, 1fr);
+        border-color: #242424 !important;
+        border-top: 1px solid #242424 !important;
+        margin-top: 0;
+
+        > .account-label {
+            background: #adcfe7;
+            text-align: center;
+            grid-row-start: 1;
+            -ms-grid-row: 1;
+            -ms-grid-row-span: 1;
+            font-size: .8rem;
+            @include flex-row-center();
+            &.label-1 {
+                grid-column-start: 1;
+                -ms-grid-column: 1;
+                -ms-grid-column-span: 1;
+            }
+
+            &.label-2 {
+                grid-column-start: 3;
+                -ms-grid-column: 3;
+                -ms-grid-column-span: 1;
+            }
+
+            @media #{$largeMobileScreen} {
+                &:first-child {
+                    border-left: 1px solid #242424 !important;
+                }
+            }
+
+        }
+
+        > .account-data {
+            text-align: center;
+            @include flex-row-center();
+            &.data-1 {
+                @include grid-row(1,1);
+                grid-column-start: 2;
+                -ms-grid-column: 2;
+                -ms-grid-column-span: 1;
+            }
+            
+            &.data-2 {
+                @include grid-row(1,1);
+                grid-column-start: 4;
+                -ms-grid-column: 4;
+                -ms-grid-column-span: 1;
+            }
+        }
+
+        > div {
+            padding: 12px 10px;
+            border-color: #242424 !important;
+        }
+
+        @media #{$largeMobileScreen} {
+            @include grid(auto, auto);
+
+            > .account-label {
+                justify-content: center;
+                text-align: center;
+                font-size: .7rem !important;
+                border-left: 1px solid #242424 !important;
+            }
+
+            > div {
+                @for $i from 1 through 5{
+                    &:nth-child(#{$i}){
+                        grid-row: #{$i} !important;
+                        -ms-grid-row:#{$i};
+                        grid-column: 1 !important;
+                        -ms-grid-column:1;
+                    }
+                }
+            }
+        }
+    }
+
+}

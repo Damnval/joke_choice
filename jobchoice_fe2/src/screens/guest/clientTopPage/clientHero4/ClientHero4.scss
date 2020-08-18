@@ -1,0 +1,98 @@
+@import './../../../../assets//designs/variables';
+
+.client-hero-four {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+  min-height: 80vh;
+
+  > .container {
+    .client-hero-four-row {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+    }
+
+    .client-hero-four-step {
+      font-size: 24px;
+      margin-bottom: 20px;
+
+      &.step-three {
+        width: 50%;
+      }
+
+      > .client-hero-four-title {
+        text-decoration: underline;
+        font-weight: bolder;
+      }
+
+      > .client-hero-four-desc {
+        font-size: 1.35rem;
+        white-space: pre-wrap;
+      }
+    }
+
+    .client-hero-four-table {
+      font-size: 24px;
+      width: 42.5%;
+      @include grid(1fr 1fr, auto);
+
+      > .client-hero-four-table-title {
+        @include grid-column(1, 2);
+        @include grid-row(1,1);
+        padding: 4px 8px;
+      }
+
+      > .client-hero-four-table-desc {
+        @include grid(2fr 1fr, auto);
+        @include grid-column(1, 2);
+
+        @for $i from 1 through 5{
+          &:nth-child(#{$i}){
+            @include grid-row($i,1);
+          }
+        }
+        
+        .client-hero-four-table-desc-sub-title {
+          @include grid-column(1, 1);
+          @include grid-row(1,1);
+          padding: 4px 8px;
+        }
+
+        .client-hero-four-table-desc-text {
+          @include grid-column(2, 1);
+          @include grid-row(1,1);
+          padding: 4px 8px;
+          color: $colorSecondary;
+
+          &.bold {
+            color: black;
+            font-weight: bold;
+          }
+        }
+      }
+    }
+
+    @media #{$largeMobileScreen} {
+      .client-hero-four-row {
+        flex-direction: column;
+      }
+
+      .client-hero-four-step {
+  
+        &.step-three {
+          width: 100%;
+        }
+
+      }
+
+      .client-hero-four-table {
+        font-size: 24px;
+        width: 100%;
+        @include grid(1fr 1fr, auto);
+      }
+      
+    }
+  }
+}

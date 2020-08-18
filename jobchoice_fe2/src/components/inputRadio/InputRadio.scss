@@ -1,0 +1,42 @@
+@import '../../assets/designs/variables';
+
+.input-radio-area {
+  display: inline-flex;
+  align-items: center;
+}
+
+.input-radio-individual {
+  display: flex;
+  justify-content: center;
+
+  .input-radio-click {
+    padding: 10px 15px;
+
+    input {
+      -moz-appearance: none;
+      appearance: none;
+      display: inline-block;
+      background-color: #f1f1f1;
+      color: #666;
+      top: 5px;
+      height: 20px;
+      width: 20px;
+      margin-right: 7px;
+      -webkit-appearance: radio;
+    }
+
+    label {
+      color: #333333;
+    }
+
+    &:hover {
+      label {
+        color: $colorTertiary;
+      }
+
+      input {
+        background-color: $colorGreen;
+      }
+    }
+  }
+}

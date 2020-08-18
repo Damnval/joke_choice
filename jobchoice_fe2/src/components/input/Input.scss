@@ -1,0 +1,66 @@
+input {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  border: 1.5px solid #cccccc;
+  -webkit-appearance: none; /* add this */
+
+  &[type=time] {
+    flex-direction: row;
+  }
+}
+
+label {
+  font-size: 1rem;
+  margin-bottom: 0.25em;
+  margin-top: 12px;
+  color: #222;
+  font-weight: lighter;
+}
+
+.input-field:first-child > label {
+  margin-top: 0;
+}
+
+.input-field {
+  width: 100%;
+}
+
+input.error {
+  border: 1px solid red;
+}
+
+.errorMessage {
+  color: red;
+  font-size: 0.75em;
+  display: relative;
+}
+
+.errorNone {
+  padding: 0.75em 0;
+}
+
+.required-badge {
+  background-color: rgb(167, 39, 39);
+  color: white;
+  padding: 1px 4px 1px 4px;
+  margin-left: 4px;
+  border-radius: 4px;
+  white-space: pre;
+  max-height: 26px;
+}
+
+.optional-badge {
+  background-color: grey;
+  color: white;
+  padding: 1px 4px 1px 4px;
+  margin-left: 4px;
+  border-radius: 4px;
+  white-space: pre;
+  max-height: 26px;
+}
+
+input[type=date] {
+  width: 140px;
+  font-size: 12px;
+}

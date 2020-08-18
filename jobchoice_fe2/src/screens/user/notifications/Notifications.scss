@@ -1,0 +1,14 @@
+.notification-header > .notification-title {
+    background-color: #4c6e6e !important;
+    color: #ffffff;
+    text-align: center;
+    vertical-align: middle;
+
+    &:nth-of-type(1) {
+        min-width: 220px;
+    }
+
+    &:nth-of-type(4) {
+        min-width: 150px;
+    }
+}

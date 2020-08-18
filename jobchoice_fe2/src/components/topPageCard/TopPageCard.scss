@@ -1,0 +1,273 @@
+@import '../../assets/designs/_variables.scss';
+
+// Mixin for Large Mobile View
+@mixin lmv($size) {
+  width: $size;
+  height: $size;
+  z-index: 1;
+
+  .flip-card-inner > .flip-card-front {
+    width: $size;
+    height: $size;
+  }
+
+  .flip-card-back {
+    font-size: .8rem;
+  }
+}
+
+.top_page_card {
+  position: absolute;
+  background-color: transparent;
+  perspective: 1000px;
+  border-radius: 50%;
+
+    > .flip-card-inner {
+      border-radius: 50%;
+      overflow: hidden;
+
+      > .flip-card-front {
+        width: 196px;
+        height: 196px;
+        background-position: center center;
+        background-repeat: no-repeat;
+        overflow: hidden;
+        border-radius: 50%;
+        background-color: transparent;
+      }
+
+      > img {
+        object-fit: cover; /* Do not scale the image */
+        object-position: center; /* Center the image within the element */
+        height: 100%;
+        width: auto;
+        z-index: 100;
+        border-radius: 50%;
+        transition: opacity .5s;
+        -ms-transition: opacity .25s;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: 50% 50%;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        -ms-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+        -ms-interpolation-mode: bicubic !important;
+      }
+
+      .flip-card-back {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        text-align: center;
+        padding: 6px;
+        height: 100%;
+        border-radius: 50%;
+        background-color: lighten($colorQuad, 20%);
+        color: black;
+        transform: rotateY(180deg);
+        z-index: 1;
+        left: 0;
+        top: 0;
+        opacity: 0;
+        transition: opacity .5s;
+        -ms-transition: opacity .25s;
+
+        > div {
+          width: 100%;
+        }
+      }
+    }
+
+    .chosen-hatarakikata-description {
+      opacity: 0.85;
+      font-family: $enFont;
+      text-align: center;
+      font-size: .8rem;
+      width: 100%;
+      font-weight: 800;
+      margin-bottom: auto;
+    }
+
+    &.active {
+      .chosen-hatarakikata-description {
+          opacity: 1;
+      }
+  }
+
+}
+
+.top_page_card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+  
+    .hatarakikata-image-desc {
+      opacity: 1;
+      text-rendering: optimizeSpeed;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    img {
+      opacity: 0;
+    }
+
+    .flip-card-back {
+      opacity: 1;
+    }
+}
+
+@mixin top-page-card($size, $left, $top) {
+  left: 50%;
+  top: 50%;
+  margin-left: $left;
+  margin-top: $top;
+  @include width-height($size);
+
+  .flip-card-inner > .flip-card-front {
+    @include width-height($size);
+
+    @media #{$laptopScreen} {
+      @include width-height($size);
+    }
+  }
+}
+
+// Top Left Orange 1st Image
+.top_page_01 {
+  @include top-page-card(196px, -848px, -382px);
+}
+
+// Top Left Red 1st Image
+.top_page_02 {
+  @include top-page-card(114px, -564px, -346px);
+}
+
+// Mid Left Orange 1st Image
+.top_page_03 {
+  @include top-page-card(190px, -722.5px, -43px);
+}
+
+// Bottom Left Green 1st Image
+.top_page_04 {
+  @include top-page-card(246px, -840px, 211px);
+}
+
+// Bottom Mid Yellow 2nd Image
+.top_page_05 {
+  @include top-page-card(158px, -574px, 224px);
+}
+
+// Bottom Mid Yellow 1st Image
+.top_page_06 {
+  @include top-page-card(164px, -969px, 99px);
+}
+
+// Mid Red 1st Image
+.top_page_07 {
+  @include top-page-card(156px, -1061px, -90px);
+}
+
+.top_page_11 {
+  @include top-page-card(194px, 561px, -122px);
+}
+
+.top_page_12 {
+  @include top-page-card(112px, 472px, 275px);
+}
+
+.top_page_13 {
+  @include top-page-card(230px, 662px, 152px);
+}
+
+.top_page_14 {
+  @include top-page-card(160px, 856px, -233px);
+}
+
+.top_page_15 {
+  @include top-page-card(136px, 440px, -345px);
+}
+
+.top_page_16 {
+  @include top-page-card(162px, 698px, -388px);
+}
+
+.top_page_17 {
+  @include top-page-card(170px, 926px, -49px);
+}
+
+.top_page_18 {
+  @include top-page-card(170px, -443px, -268px);
+
+  @media #{$largeMobileScreen} {
+    margin-left: -320px;
+    margin-top: -205px;
+    @include lmv(130px);
+  }
+}
+
+.top_page_19 {
+  @include top-page-card(162px, 300px, 132px);
+
+  @media #{$largeMobileScreen} {
+    margin-left: 205px;
+    margin-top: 85px;
+    @include lmv(125px);
+  }
+}
+
+.top_page_20 {
+  @include top-page-card(132px, 207px, -415px);
+
+  @media #{$largeMobileScreen} {
+    margin-left: 137px;
+    margin-top: -315px;
+    @include lmv(110px);
+  }
+}
+
+.top_page_21 {
+  @include top-page-card(136px, -318px, 316px);
+
+  @media #{$largeMobileScreen} {
+    margin-left: -232px;
+    margin-top: 220px;
+    @include lmv(110px);
+  }
+}
+
+.top_page_22 {
+  @include top-page-card(70px, -398px, 67px);
+
+  @media #{$largeMobileScreen} {
+    margin-left: -286px;
+    margin-top: 37px;
+    @include lmv(60px);
+  }
+}
+
+.top_page_23 {
+  @include top-page-card(70px, 352px, -103px);
+
+  @media #{$largeMobileScreen} {
+    margin-left: 245px;
+    margin-top: -87.5px;
+    @include lmv(60px);
+  }
+}
+
+.top_page_24 {
+  @include top-page-card(164px, -1213px, -334px);
+}
+
+.top_page_25 {
+  @include top-page-card(164px, -1204px, 246px);
+}
+
+.top_page_26 {
+  @include top-page-card(216px, 1020px, -440px);
+}
+
+.top_page_27 {
+  @include top-page-card(172px, 1050px, 188px);
+}
